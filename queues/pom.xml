@@ -7,27 +7,34 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>jfskora.scratch.audio</artifactId>
+    <artifactId>jfskora.scratch.queues</artifactId>
     <packaging>jar</packaging>
 
-    <name>jfskora.scratch.audio</name>
+    <name>jfskora.scratch.queue</name>
     <url>http://maven.apache.org</url>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>1.7</source>
+                    <target>1.7</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
     <dependencies>
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
             <version>4.12</version>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.tika</groupId>
-            <artifactId>tika-core</artifactId>
-            <version>1.7</version>
         </dependency>
     </dependencies>
 </project>

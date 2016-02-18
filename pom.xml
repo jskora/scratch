@@ -10,7 +10,6 @@
     <version>1.0-SNAPSHOT</version>
     <modules>
         <module>audio</module>
+        <module>queues</module>
     </modules>
-
-
 </project>
