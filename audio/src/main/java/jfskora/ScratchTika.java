@@ -1,7 +1,12 @@
 package jfskora;
 
+import org.apache.tika.Tika;
+import org.apache.tika.detect.DefaultDetector;
+import org.apache.tika.detect.Detector;
+import org.apache.tika.detect.MagicDetector;
 import org.apache.tika.exception.TikaException;
 import org.apache.tika.metadata.Metadata;
+import org.apache.tika.mime.MediaType;
 import org.apache.tika.parser.AutoDetectParser;
 import org.apache.tika.sax.BodyContentHandler;
 import org.xml.sax.SAXException;
@@ -21,7 +26,7 @@ public class ScratchTika {
     public static void main(String[] args) throws TikaException, SAXException, IOException {
         for (String arg: args) {
             File fileArg = new File(arg);
-            if (Files.isDirectory(fileArg.toPath())) {
+            if (fileArg != null && Files.isDirectory(fileArg.toPath())) {
                 for (File file : Arrays.asList(fileArg.listFiles())) {
                     parseFile(file.getPath());
                 }
@@ -54,20 +59,28 @@ public class ScratchTika {
                 } else {
                     multiBldr.append(metadata.get(key));
                 }
-                bldr.append(key).append(" = ").append(multiBldr.toString()).append(System.lineSeparator());
+                if (bldr.length() > 0) {
+                    bldr.append(System.lineSeparator());
+                }
+                bldr.append("    ").append(key).append(" = ").append(multiBldr.toString().trim());
             }
 
             System.err.println(LINE2);
             System.err.println("file: " + filepath);
-            System.err.println(LINE1);
-            System.err.println("handler.toString()");
-            System.err.println(LINE1);
-            System.err.println(handler.toString().trim());
-            System.err.println(LINE1);
-            System.err.println("metadata");
-            System.err.println(LINE1);
-            System.err.println(bldr.toString().trim());
+            System.err.println("handler:");
+            if (handler.toString().trim().length() > 0) {
+                System.err.println("    " + handler.toString());
+            }
+            System.err.println("metadata:");
+            System.err.println(bldr.toString());
+
+            Detector detector = new DefaultDetector();
+            inputStream.reset();
+            MediaType media = detector.detect(inputStream, null);
             System.err.println(LINE2);
+            System.err.println("detector:");
+            System.err.println(media.toString());
+
         } catch (SAXException e) {
             System.err.println("SAXException: " + e.getMessage());
             e.printStackTrace();
@@ -81,6 +94,6 @@ public class ScratchTika {
             e.printStackTrace();
             throw e;
         }
-
+//        System.err.println(LINE2);
     }
 }
