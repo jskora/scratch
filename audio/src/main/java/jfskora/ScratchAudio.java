@@ -1,5 +1,6 @@
 package jfskora;
 
+import org.apache.tika.Tika;
 import org.apache.tika.detect.DefaultDetector;
 import org.apache.tika.exception.TikaException;
 import org.apache.tika.metadata.Metadata;
@@ -92,11 +93,15 @@ public class ScratchAudio {
         BodyContentHandler handler = new BodyContentHandler();
         Metadata metadata = new Metadata();
         try {
+            StringBuilder bldr = new StringBuilder();
+
+            Tika tika = new Tika();
+            bldr.append("tike.filetype:").append(tika.detect(audioFile));
+
             BufferedInputStream inputStream = new BufferedInputStream(new FileInputStream(audioFile));
             inputStream.mark((int)audioFile.length());
             parser.parse(inputStream, handler, metadata);
 
-            StringBuilder bldr = new StringBuilder();
             for (String key : metadata.names()) {
                 StringBuilder multiBldr = new StringBuilder();
                 if (metadata.isMultiValued(key)) {
@@ -111,20 +116,17 @@ public class ScratchAudio {
                 } else {
                     multiBldr.append(metadata.get(key));
                 }
-                if (bldr.length() > 0) {
-                    bldr.append(System.lineSeparator());
-                }
+                bldr.append(System.lineSeparator());
                 bldr.append(key).append(": ").append(multiBldr.toString().trim());
             }
 
-            if (handler.toString().trim().length() > 0) {
-                System.err.println(handler.toString().trim());
-                System.err.println("------------------------------------------------------------");
-                System.out.flush();
-                System.err.flush();
-            }
+//            if (handler.toString().trim().length() > 0) {
+//                System.err.println(handler.toString().trim());
+//                System.err.println("------------------------------------------------------------");
+//                System.out.flush();
+//                System.err.flush();
+//            }
             inputStream.close();
-            System.out.println("metadata:");
             System.out.println(bldr.toString());
             System.out.flush();
             System.err.flush();
