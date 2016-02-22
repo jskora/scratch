@@ -118,18 +118,18 @@ public class ScratchAudio {
             }
 
             if (handler.toString().trim().length() > 0) {
-                System.err.println("------------------------------------------------------------");
-                System.err.println("    " + handler.toString());
+                System.err.println(handler.toString().trim());
                 System.err.println("------------------------------------------------------------");
                 System.out.flush();
                 System.err.flush();
             }
+            inputStream.close();
             System.out.println("metadata:");
             System.out.println(bldr.toString());
             System.out.flush();
             System.err.flush();
 
-            inputStream.reset();
+            inputStream = new BufferedInputStream(new FileInputStream(audioFile));
             MediaType media = new DefaultDetector().detect(inputStream, new Metadata());
             System.out.println("media: " +  media.toString());
             System.out.flush();
