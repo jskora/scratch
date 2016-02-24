@@ -54,5 +54,6 @@
     <orderEntry type="library" name="Maven: com.uwyn:jhighlight:1.0" level="project" />
     <orderEntry type="library" name="Maven: com.pff:java-libpst:0.8.1" level="project" />
     <orderEntry type="library" name="Maven: org.codehaus.groovy:groovy-all:2.4.0" level="project" />
+    <orderEntry type="library" name="Maven: commons-cli:commons-cli:1.2" level="project" />
   </component>
 </module>

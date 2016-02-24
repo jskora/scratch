@@ -1,5 +1,12 @@
 package jfskora;
 
+import org.apache.commons.cli.CommandLine;
+import org.apache.commons.cli.CommandLineParser;
+import org.apache.commons.cli.Option;
+import org.apache.commons.cli.OptionBuilder;
+import org.apache.commons.cli.Options;
+import org.apache.commons.cli.ParseException;
+import org.apache.commons.cli.PosixParser;
 import org.apache.tika.Tika;
 import org.apache.tika.config.TikaConfig;
 import org.apache.tika.detect.DefaultDetector;
@@ -9,6 +16,8 @@ import org.apache.tika.language.LanguageIdentifier;
 import org.apache.tika.metadata.Metadata;
 import org.apache.tika.mime.MediaType;
 import org.apache.tika.parser.AutoDetectParser;
+import org.apache.tika.parser.ParseContext;
+import org.apache.tika.parser.Parser;
 import org.apache.tika.sax.BodyContentHandler;
 import org.xml.sax.SAXException;
 
@@ -25,9 +34,10 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Comparator;
 import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 public class ScratchAudio {
 
@@ -36,31 +46,73 @@ public class ScratchAudio {
     public static String TIKA_LANGUAGE_KEY = "tika.language";
 
     public static void main(String[] args) {
-        HashMap<File, HashMap<String, Metadata>> files = new HashMap<>();
-        for (String arg : args) {
-            File argFile = new File(arg);
-            if (argFile.isDirectory()) {
-                File[] children = argFile.listFiles();
-                if (children != null && children.length > 0) {
-                    for (File argChildFile : children) {
-                        if (!argChildFile.isDirectory()) {
-                            files.put(argChildFile, new HashMap<String, Metadata>());
-                        }
-                    }
-                }
-            } else {
-                files.put(argFile, new HashMap<String, Metadata>());
-            }
+
+        Options options = new Options();
+
+        OptionBuilder.withLongOpt("lang");
+        OptionBuilder.withDescription("include language summary");
+        options.addOption(OptionBuilder.create("lang"));
+
+        OptionBuilder.withLongOpt("tika_detect");
+        OptionBuilder.withDescription("use Tika detect logic");
+        options.addOption(OptionBuilder.create("tika_detect"));
+
+        OptionBuilder.withLongOpt("javafx");
+        OptionBuilder.withDescription("use Java FX logic");
+        options.addOption(OptionBuilder.create("javafx"));
+
+        OptionBuilder.withLongOpt("tika_parse");
+        OptionBuilder.withDescription("use Tika parse logic");
+        options.addOption(OptionBuilder.create("tika_parse"));
+
+        OptionBuilder.withLongOpt("tika_language");
+        OptionBuilder.withDescription("use Tika language logic");
+        options.addOption(OptionBuilder.create("tika_language"));
+
+        CommandLineParser parser = new PosixParser();
+        CommandLine commandLine = null;
+        try {
+            commandLine = parser.parse(options, args);
+        } catch (ParseException e) {
+            System.err.println("Error parsing arguments: " + e.getMessage());
+            System.exit(1);
         }
+
+        List<File> scannedFiles = getFileList(commandLine.getArgs());
+        HashMap<File, HashMap<String, Metadata>> files = new HashMap<>();
+        for (File file : scannedFiles) {
+            files.put(file, new HashMap<String, Metadata>());
+        }
+
+        ArrayList<String> ctxList = new ArrayList<String>();
+        if (commandLine.hasOption("tika_detect")) {
+            ctxList.add("tika_detect");
+        }
+        if (commandLine.hasOption("javafx")) {
+            ctxList.add("javafx");
+        }
+        if (commandLine.hasOption("tika_parse")) {
+            ctxList.add("tika_parse");
+        }
+        if (commandLine.hasOption("tika_language")) {
+            ctxList.add("tika_language");
+        }
+        String[] contexts = ctxList.toArray(new String[1]);
+
         System.out.println();
-        System.out.println("============================================================");
-        System.out.println("types");
-        System.out.println("----------------------------------------");
         for (File f : files.keySet()) {
-            files.get(f).put("tika-detect", tika_getMetadata(f));
-            files.get(f).put("javafx", audioFileStatsJavaXSound(f));
-            files.get(f).put("tika-parse", audioFileStatsTika(f));
-            System.out.println(f.getName() + " = " + (files.get(f).get("tika-detect").get(TIKA_MEDIA_TYPE_KEY)));
+            if (commandLine.hasOption("tika_detect")) {
+                files.get(f).put("tika_detect", tika_detect(f));
+            }
+            if (commandLine.hasOption("javafx")) {
+                files.get(f).put("javafx", javafx(f));
+            }
+            if (commandLine.hasOption("tika_parse")) {
+                files.get(f).put("tika_parse", tika_parse(f));
+            }
+            if (commandLine.hasOption("tika_language")) {
+                files.get(f).put("tika_language", tika_language(f));
+            }
         }
         System.out.println("========================================");
 
@@ -68,23 +120,70 @@ public class ScratchAudio {
             System.out.println();
             System.out.println("============================================================");
             System.out.println(f.getName());
-            System.out.println("++++++++++++++++++++++++++++++++++++++++");
-            System.out.println("tika-detect");
-            System.out.println("----------------------------------------");
-            System.out.println(formatMetadata(files.get(f).get("tika-detect")));
-            System.out.println("++++++++++++++++++++++++++++++++++++++++");
-            System.out.println("(JavaFX) AudioSystem.getAudioInputStream().getFormat()");
-            System.out.println("----------------------------------------");
-            System.out.println(formatMetadata(files.get(f).get("javafx")));
-            System.out.println("++++++++++++++++++++++++++++++++++++++++");
-            System.out.println("tika-parse");
-            System.out.println("----------------------------------------");
-            System.out.println(formatMetadata(files.get(f).get("tika-parse")));
+            for (String context : contexts) {
+                System.out.println("++++++++++++++++++++++++++++++++++++++++");
+                System.out.println(context);
+                System.out.println("----------------------------------------");
+                System.out.println(formatMetadata(files.get(f).get(context)));
+            }
             System.out.println("========================================");
+        }
+
+        if (commandLine.hasOption("lang")) {
+            System.out.println();
+            System.out.println("============================================================");
+            for (File f : files.keySet()) {
+                System.out.println(f.getName());
+                HashMap<String, Metadata> fileMetaMap = files.get(f);
+                for (String context : contexts) {
+                    Metadata ctxMeta = fileMetaMap.get(context);
+                    if (Arrays.asList(ctxMeta.names()).contains(TIKA_LANGUAGE_KEY)) {
+                        System.out.println(context + "." + TIKA_LANGUAGE_KEY + " = " + ctxMeta.get(TIKA_LANGUAGE_KEY));
+                    }
+                }
+                System.out.println("----------------------------------------");
+            }
         }
     }
 
-    private static Metadata tika_getMetadata(File file) {
+    private static List<File> getFileList(String[] args) {
+        List<File> files = new ArrayList<>();
+        for (String arg : args) {
+            File argFile = new File(arg);
+            if (argFile.isDirectory()) {
+                File[] children = argFile.listFiles();
+                if (children != null && children.length > 0) {
+                    for (File argChildFile : children) {
+                        if (!argChildFile.isDirectory()) {
+                            files.add(argChildFile);
+                        }
+                    }
+                }
+            } else {
+                files.add(argFile);
+            }
+        }
+        return files;
+    }
+
+    private static Metadata tika_language(File file) {
+        Tika tika = new Tika();
+        Parser parser = new AutoDetectParser();
+        BodyContentHandler handler = new BodyContentHandler();
+        Metadata metadata = new Metadata();
+        try {
+            FileInputStream content = new FileInputStream(file);
+            parser.parse(content, handler, metadata, new ParseContext());
+            LanguageIdentifier object = new LanguageIdentifier(handler.toString());
+            metadata.set(TIKA_LANGUAGE_KEY, object.getLanguage());
+        } catch (SAXException | TikaException | IOException e) {
+            e.printStackTrace();
+            return metadata;
+        }
+        return metadata;
+    }
+
+    private static Metadata tika_detect(File file) {
         Metadata metadata = new Metadata();
         TikaConfig tikaConfig;
         try {
@@ -113,27 +212,15 @@ public class ScratchAudio {
             metadata.set(TIKA_LANGUAGE_KEY, identifier.getLanguage());
             return metadata;
         } catch (FileNotFoundException e) {
-            metadata.set("error-tikaparse", "tika-parse error processing file (" + file.getName() + "): " + e.getMessage());
+            metadata.set("error_tika_parse", "tika_parse error processing file (" + file.getName() + "): " + e.getMessage());
             return metadata;
         } catch (IOException e) {
-            metadata.set("error-tikaparse", "tika-parse error processing file (" + file.getName() + "): " + e.getMessage());
+            metadata.set("error_tika_parse", "tika_parse error processing file (" + file.getName() + "): " + e.getMessage());
             return metadata;
         }
-
-//        InputStream in = ClassLoader.getSystemClassLoader().getResourceAsStream("en.ngp");
-//        BufferedReader reader = new BufferedReader(new InputStreamReader(in));
-//        StringBuilder content = new StringBuilder();
-//        String line = reader.readLine();
-//        while (line != null) {
-//            content.append(line);
-//            line = reader.readLine();
-//        }
-//        reader.close();
-//        LanguageProfile profile = new LanguageProfile(content.toString());
-
     }
 
-    private static Metadata audioFileStatsJavaXSound(File audioFile) {
+    private static Metadata javafx(File audioFile) {
 
         final Metadata metadata = new Metadata();
         final AudioInputStream audioInputStream;
@@ -162,11 +249,12 @@ public class ScratchAudio {
         return metadata;
     }
 
-    private static Metadata audioFileStatsTika(File audioFile) {
+    private static Metadata tika_parse(File audioFile) {
         Metadata metadata = new Metadata();
         try {
             String filetype = new Tika().detect(audioFile);
             metadata.set("tika.filetype", filetype);
+            metadata.set("file.size", Long.toString(audioFile.length()));
 
             BufferedInputStream inputStream = new BufferedInputStream(new FileInputStream(audioFile));
             new AutoDetectParser().parse(inputStream, new BodyContentHandler(), metadata);
@@ -191,14 +279,21 @@ public class ScratchAudio {
             MediaType media = new DefaultDetector().detect(inputStream, new Metadata());
             metadata.set("media", media.toString());
         } catch (SAXException | IOException | TikaException e) {
-            metadata.set("error-tika-detect", "tika-detect error processing file (" + audioFile.getName() + "): " + e.getMessage());
+            metadata.set("error_tika_detect", "tika_detect error processing file (" + audioFile.getName() + "): " + e.getMessage());
         }
         return metadata;
     }
 
     private static String formatMetadata(Metadata metadata) {
         StringBuilder builder = new StringBuilder();
-        for (String key : metadata.names()) {
+        String[] names = metadata.names();
+        Arrays.sort(names, new Comparator<String>() {
+            @Override
+            public int compare(String o1, String o2) {
+                return o1.toLowerCase().compareTo(o2.toLowerCase());
+            }
+        });
+        for (String key : names) {
             StringBuilder multiBldr = new StringBuilder();
             if (metadata.isMultiValued(key)) {
                 for (String val : metadata.getValues(key)) {
