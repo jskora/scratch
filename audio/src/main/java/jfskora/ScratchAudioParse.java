@@ -111,7 +111,7 @@ public class ScratchAudioParse {
             if (builder.length() > 0) {
                 builder.append(System.lineSeparator());
             }
-            builder.append(key).append(": ").append(multiBldr.toString().trim());
+            builder.append(key).append(" = ").append(multiBldr.toString().trim());
         }
         return builder.toString();
     }
