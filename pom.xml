@@ -11,5 +11,7 @@
     <modules>
         <module>audio</module>
         <module>queues</module>
+        <module>debug-logging</module>
+        <module>java-kruft</module>
     </modules>
 </project>
