@@ -13,5 +13,6 @@
         <module>queues</module>
         <module>debug-logging</module>
         <module>java-kruft</module>
+        <module>sample-maven-plugin</module>
     </modules>
 </project>

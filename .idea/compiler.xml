@@ -31,10 +31,22 @@
         <processorPath useClasspath="true" />
         <module name="audio" />
       </profile>
+      <profile default="false" name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="true" />
+        <module name="debug-logging" />
+        <module name="java-kruft" />
+        <module name="sample-maven-plugin" />
+      </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="audio" target="1.7" />
+      <module name="debug-logging" target="1.5" />
+      <module name="java-kruft" target="1.5" />
       <module name="queues" target="1.7" />
+      <module name="sample-maven-plugin" target="1.5" />
       <module name="scratch" target="1.5" />
     </bytecodeTargetLevel>
   </component>
