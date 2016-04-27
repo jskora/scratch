@@ -15,5 +15,6 @@
         <module>java-kruft</module>
         <module>sample-maven-plugin</module>
         <module>javaeight</module>
+        <module>tempfiles</module>
     </modules>
 </project>
