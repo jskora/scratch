@@ -17,5 +17,6 @@
         <module>javaeight</module>
         <module>tempfiles</module>
         <module>jsoup</module>
+        <module>philosophers</module>
     </modules>
 </project>
