@@ -5,9 +5,11 @@
       <module fileurl="file://$PROJECT_DIR$/audio/audio.iml" filepath="$PROJECT_DIR$/audio/audio.iml" />
       <module fileurl="file://$PROJECT_DIR$/debug-logging/debug-logging.iml" filepath="$PROJECT_DIR$/debug-logging/debug-logging.iml" />
       <module fileurl="file://$PROJECT_DIR$/java-kruft/java-kruft.iml" filepath="$PROJECT_DIR$/java-kruft/java-kruft.iml" />
+      <module fileurl="file://$PROJECT_DIR$/audio/jfskora.scratch.audio.iml" filepath="$PROJECT_DIR$/audio/jfskora.scratch.audio.iml" />
       <module fileurl="file://$PROJECT_DIR$/queues/queues.iml" filepath="$PROJECT_DIR$/queues/queues.iml" />
       <module fileurl="file://$PROJECT_DIR$/sample-maven-plugin/sample-maven-plugin.iml" filepath="$PROJECT_DIR$/sample-maven-plugin/sample-maven-plugin.iml" />
       <module fileurl="file://$PROJECT_DIR$/scratch.iml" filepath="$PROJECT_DIR$/scratch.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jsoup/scratch-jsoup.iml" filepath="$PROJECT_DIR$/jsoup/scratch-jsoup.iml" />
     </modules>
   </component>
 </project>

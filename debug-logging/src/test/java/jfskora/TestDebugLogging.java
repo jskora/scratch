@@ -9,7 +9,7 @@ import static org.junit.Assert.assertTrue;
 public class TestDebugLogging
 {
     @Test
-    public static void TestDebugLogging()
+    public void testLogging()
     {
         Logger logger = Logger.getGlobal();
         logger.info("testing 1 2 3");
