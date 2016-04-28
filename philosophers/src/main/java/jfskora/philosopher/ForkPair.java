@@ -1,4 +1,6 @@
-package jfskora;
+package jfskora.philosopher;
+
+import jfskora.philosopher.ForkLock;
 
 import java.util.concurrent.locks.ReentrantLock;
 

@@ -1,4 +1,4 @@
-package jfskora;
+package jfskora.philosopher;
 
 import java.util.concurrent.locks.ReentrantLock;
 
