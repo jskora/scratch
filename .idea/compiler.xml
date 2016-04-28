@@ -36,11 +36,19 @@
         <module name="sample-maven-plugin" />
         <module name="scratch-jsoup" />
       </profile>
+      <profile default="false" name="Annotation profile for javaeight" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="true" />
+        <module name="javaeight" />
+      </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="audio" target="1.7" />
       <module name="debug-logging" target="1.5" />
       <module name="java-kruft" target="1.5" />
+      <module name="javaeight" target="1.8" />
       <module name="jfskora.scratch.audio" target="1.7" />
       <module name="queues" target="1.7" />
       <module name="sample-maven-plugin" target="1.5" />
