@@ -31,17 +31,12 @@
         <processorPath useClasspath="true" />
         <module name="debug-logging" />
         <module name="java-kruft" />
+        <module name="javaeight" />
         <module name="jfskora.scratch.audio" />
         <module name="queues" />
         <module name="sample-maven-plugin" />
         <module name="scratch-jsoup" />
-      </profile>
-      <profile default="false" name="Annotation profile for javaeight" enabled="true">
-        <sourceOutputDir name="target/generated-sources/annotations" />
-        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
-        <outputRelativeToContentRoot value="true" />
-        <processorPath useClasspath="true" />
-        <module name="javaeight" />
+        <module name="tempfiles" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -54,6 +49,7 @@
       <module name="sample-maven-plugin" target="1.5" />
       <module name="scratch" target="1.5" />
       <module name="scratch-jsoup" target="1.5" />
+      <module name="tempfiles" target="1.5" />
     </bytecodeTargetLevel>
   </component>
 </project>
