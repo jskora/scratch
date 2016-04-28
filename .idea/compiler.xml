@@ -31,6 +31,14 @@
         <processorPath useClasspath="true" />
         <module name="debug-logging" />
         <module name="java-kruft" />
+        <module name="sample-maven-plugin" />
+        <module name="tempfiles" />
+      </profile>
+      <profile default="false" name="Annotation profile for javaeight" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="true" />
         <module name="javaeight" />
         <module name="jfskora.scratch.audio" />
         <module name="philosophers" />
