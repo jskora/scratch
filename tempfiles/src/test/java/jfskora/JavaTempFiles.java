@@ -9,22 +9,16 @@ import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.lang.management.ManagementFactory;
-import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Collections;
 
 public class JavaTempFiles {
 
-    final static String PATH1 = "/tmp/file1.tmp";
+    private final static String PATH1 = "/tmp/file1.tmp";
 
-    final static Long SLEEP_MILLIS_1 = 10000L;
-    final static Long MILLIS_PER_DOT = 1000L;
+    private final static Long SLEEP_MILLIS_1 = 10000L;
+    private final static Long MILLIS_PER_DOT = 1000L;
 
-    final static String AWK_BINARY = "/usr/bin/awk";
-    final static String LSOF_BINARY = "/usr/sbin/lsof";
-
-    Long pid;
+    private Long pid;
 
     @Before
     public void Before() {
@@ -36,27 +30,29 @@ public class JavaTempFiles {
     public void FileOpenWriteDelete() throws IOException, InterruptedException {
         File testfile = new File(PATH1);
         FileOutputStream out1 = new FileOutputStream(testfile);
-        out1.write("testing 123".getBytes());
-        System.out.println("file written " + testfile.getAbsolutePath());
-        System.out.println("sleeping");
+
+        System.out.println("\nfile opened " + testfile.getAbsolutePath());
         checkLSOF(testfile);
-        sleepTimer(SLEEP_MILLIS_1);
-        if (!testfile.delete()) {
-            System.out.println("file deleted");
+
+        out1.write("testing 123".getBytes());
+        System.out.println("\nfile written " + testfile.getAbsolutePath());
+        checkLSOF(testfile);
+
+        if (testfile.delete()) {
+            System.out.println("\nfile deleted" + testfile.getAbsolutePath());
         } else {
-            System.out.println("delete failed");
+            System.out.println("\ndelete failed" + testfile.getAbsolutePath());
         }
-        System.out.println("sleeping");
-        sleepTimer(SLEEP_MILLIS_1);
+        checkLSOF(testfile);
+
         out1.close();
-        System.out.println("file closed");
-        System.out.println("sleeping");
-        sleepTimer(SLEEP_MILLIS_1);
+        System.out.println("\nfile closed" + testfile.getAbsolutePath());
+        checkLSOF(testfile);
     }
 
     private void checkLSOF(File testfile) throws IOException {
         Runtime rt = Runtime.getRuntime();
-        String[] commands = {LSOF_BINARY, "-p" + pid.toString(), "|", AWK_BINARY, "'NR < 2 || /" + testfile.getAbsolutePath().replace("/", "\\/") + "/'"};
+        String[] commands = {"bash", "-c", "lsof -p" + pid.toString() + " 2>/dev/null | awk 'NR < 2 || /" + testfile.getAbsolutePath().replace("/", "\\/") + "/'"};
         System.out.println(StringUtils.join(Arrays.asList(commands), " "));
         Process proc = rt.exec(commands);
         BufferedReader stdInput = new BufferedReader(new InputStreamReader(proc.getInputStream()));
@@ -74,7 +70,7 @@ public class JavaTempFiles {
         proc.destroy();
     }
 
-    public static long getPID() {
+    private static long getPID() {
         String processName = java.lang.management.ManagementFactory.getRuntimeMXBean().getName();
         return Long.parseLong(processName.split("@")[0]);
     }
