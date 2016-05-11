@@ -18,5 +18,6 @@
         <module>tempfiles</module>
         <module>jsoup</module>
         <module>philosophers</module>
+        <module>java-strings</module>
     </modules>
 </project>
