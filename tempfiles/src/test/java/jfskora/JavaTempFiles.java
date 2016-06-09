@@ -1,6 +1,5 @@
 package jfskora;
 
-import com.sun.deploy.util.StringUtils;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -53,7 +52,7 @@ public class JavaTempFiles {
     private void checkLSOF(File testfile) throws IOException {
         Runtime rt = Runtime.getRuntime();
         String[] commands = {"bash", "-c", "lsof -p" + pid.toString() + " 2>/dev/null | awk 'NR < 2 || /" + testfile.getAbsolutePath().replace("/", "\\/") + "/'"};
-        System.out.println(StringUtils.join(Arrays.asList(commands), " "));
+        System.out.println(String.join(" ", Arrays.asList(commands)));
         Process proc = rt.exec(commands);
         BufferedReader stdInput = new BufferedReader(new InputStreamReader(proc.getInputStream()));
         BufferedReader stdError = new BufferedReader(new InputStreamReader(proc.getErrorStream()));
