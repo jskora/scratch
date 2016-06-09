@@ -7,11 +7,10 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>scratch-jsoup</artifactId>
+    <artifactId>jsoup</artifactId>
     <packaging>jar</packaging>
 
-    <name>scratch-jsoup</name>
-    <url>http://maven.apache.org</url>
+    <name>jsoup</name>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
