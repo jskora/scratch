@@ -12,14 +12,15 @@
         <module>audio</module>
         <module>queues</module>
         <module>debug-logging</module>
-        <module>java-kruft</module>
+        <module>kruft</module>
         <module>sample-maven-plugin</module>
         <module>javaeight</module>
         <module>tempfiles</module>
         <module>jsoup</module>
         <module>philosophers</module>
-        <module>java-strings</module>
+        <module>strings</module>
         <module>threading</module>
+        <module>dropwizard</module>
     </modules>
 
     <build>

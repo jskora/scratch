@@ -7,10 +7,10 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>java-strings</artifactId>
+    <artifactId>strings</artifactId>
     <packaging>jar</packaging>
 
-    <name>java-strings</name>
+    <name>strings</name>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
