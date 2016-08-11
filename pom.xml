@@ -21,6 +21,7 @@
         <module>strings</module>
         <module>threading</module>
         <module>dropwizard</module>
+        <module>instrumentation</module>
     </modules>
 
     <build>
