@@ -31,6 +31,7 @@
         <module name="javaeight" />
         <module name="jsoup" />
         <module name="kruft" />
+        <module name="network" />
         <module name="philosophers" />
         <module name="queues" />
         <module name="sample-maven-plugin" />
@@ -51,6 +52,7 @@
       <module name="jfskora.scratch.audio" target="1.7" />
       <module name="jsoup" target="1.8" />
       <module name="kruft" target="1.8" />
+      <module name="network" target="1.8" />
       <module name="philosophers" target="1.8" />
       <module name="queues" target="1.7" />
       <module name="sample-maven-plugin" target="1.5" />

@@ -23,6 +23,7 @@
         <module>dropwizard</module>
         <module>instrumentation</module>
         <module>file-timestamps</module>
+        <module>network</module>
     </modules>
 
     <build>

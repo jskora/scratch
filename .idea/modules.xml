@@ -9,6 +9,7 @@
       <module fileurl="file://$PROJECT_DIR$/javaeight/javaeight.iml" filepath="$PROJECT_DIR$/javaeight/javaeight.iml" />
       <module fileurl="file://$PROJECT_DIR$/jsoup/jsoup.iml" filepath="$PROJECT_DIR$/jsoup/jsoup.iml" />
       <module fileurl="file://$PROJECT_DIR$/kruft/kruft.iml" filepath="$PROJECT_DIR$/kruft/kruft.iml" />
+      <module fileurl="file://$PROJECT_DIR$/network/network.iml" filepath="$PROJECT_DIR$/network/network.iml" />
       <module fileurl="file://$PROJECT_DIR$/philosophers/philosophers.iml" filepath="$PROJECT_DIR$/philosophers/philosophers.iml" />
       <module fileurl="file://$PROJECT_DIR$/queues/queues.iml" filepath="$PROJECT_DIR$/queues/queues.iml" />
       <module fileurl="file://$PROJECT_DIR$/sample-maven-plugin/sample-maven-plugin.iml" filepath="$PROJECT_DIR$/sample-maven-plugin/sample-maven-plugin.iml" />
