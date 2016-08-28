@@ -1,30 +1,40 @@
 import java.lang.reflect.Field;
 import java.net.InetAddress;
 import java.net.UnknownHostException;
-import java.util.ArrayList;
 import java.util.Arrays;
 
 public class TestBadIpAddress {
 
-    public static void main(String[] args) throws UnknownHostException, NoSuchFieldException, IllegalAccessException {
-        for (String property : Arrays.asList("java.version", "java.vendor", "os.name", "os.arch")) {
-            System.out.println(property + " = " + System.getProperty(property));
-        }
-        for (String fieldName : Arrays.asList("IPv4", "IPv6", "preferIPv6Address", "impl")) {
-            final Field field = InetAddress.class.getDeclaredField(fieldName);
-            field.setAccessible(true);
-            System.out.println("InetAddress." + field.getName() + " = " + field.get(null));
-        }
-        System.out.println("----------------------------------------");
-        System.out.println("running InetAddress.getByName(\"300.300.300.300\")");
-
+    public static void main(String[] args) {
+        final String BAD_IP = "300.300.300.300";
+        printConfiguration();
         try {
-            final InetAddress address = InetAddress.getByName("300.300.300.300");
-            System.out.println("FAIL: InetAddress.getByName(\"300.300.300.300\") returned " + address
-                    + " instead of throwing UnknownHostException");
+            System.out.println("running InetAddress.getByName(" + BAD_IP + ")");
+            System.out.println("result = " + InetAddress.getByName(BAD_IP));
+            System.out.println("\nFAIL: InetAddress.getByName(" + BAD_IP + ") did not throw UnknownHostException");
         } catch (UnknownHostException e) {
-            System.out.println("SUCCESS: InetAddress.getByName(\"300.300.300.300\") threw UnknownHostException");
+            e.printStackTrace();
+            System.out.println("SUCCESS: InetAddress.getByName(" + BAD_IP + ") threw UnknownHostException");
         }
     }
 
+    private static void printConfiguration() {
+        try {
+            for (String property : Arrays.asList("java.version", "java.vendor", "os.name", "os.arch")) {
+                System.out.println(property + " = " + System.getProperty(property));
+            }
+            for (String fieldName : Arrays.asList("IPv4", "IPv6", "preferIPv6Address", "impl")) {
+                final Field field = InetAddress.class.getDeclaredField(fieldName);
+                field.setAccessible(true);
+                if (fieldName.equals("impl")) {
+                    System.out.println("InetAddress." + field.getName() + ".class = " + field.get(null).getClass().getCanonicalName());
+                } else {
+                    System.out.println("InetAddress." + field.getName() + " = " + field.get(null) + " (" + field.getType().getName() + ")");
+                }
+            }
+            System.out.println("");
+        } catch (IllegalAccessException | NoSuchFieldException e) {
+            e.printStackTrace();
+        }
+    }
 }
