@@ -12,6 +12,7 @@ public class TestBadIpAddress {
             System.out.println("running InetAddress.getByName(" + BAD_IP + ")");
             System.out.println("result = " + InetAddress.getByName(BAD_IP));
             System.out.println("\nFAIL: InetAddress.getByName(" + BAD_IP + ") did not throw UnknownHostException");
+            System.out.println("  try again with 'java -Djava.net.preferIPv4Stack=true TestBadIpAddress'");
         } catch (UnknownHostException e) {
             e.printStackTrace();
             System.out.println("SUCCESS: InetAddress.getByName(" + BAD_IP + ") threw UnknownHostException");
