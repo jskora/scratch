@@ -22,6 +22,7 @@
         <module>threading</module>
         <module>dropwizard</module>
         <module>instrumentation</module>
+        <module>file-timestamps</module>
     </modules>
 
     <build>

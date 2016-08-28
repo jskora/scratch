@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/debug-logging/debug-logging.iml" filepath="$PROJECT_DIR$/debug-logging/debug-logging.iml" />
       <module fileurl="file://$PROJECT_DIR$/dropwizard/dropwizard.iml" filepath="$PROJECT_DIR$/dropwizard/dropwizard.iml" />
+      <module fileurl="file://$PROJECT_DIR$/file-timestamps/file-timestamps.iml" filepath="$PROJECT_DIR$/file-timestamps/file-timestamps.iml" />
       <module fileurl="file://$PROJECT_DIR$/instrumentation/instrumentation.iml" filepath="$PROJECT_DIR$/instrumentation/instrumentation.iml" />
       <module fileurl="file://$PROJECT_DIR$/javaeight/javaeight.iml" filepath="$PROJECT_DIR$/javaeight/javaeight.iml" />
       <module fileurl="file://$PROJECT_DIR$/jsoup/jsoup.iml" filepath="$PROJECT_DIR$/jsoup/jsoup.iml" />

@@ -24,6 +24,7 @@
         <processorPath useClasspath="true" />
         <module name="debug-logging" />
         <module name="dropwizard" />
+        <module name="file-timestamps" />
         <module name="instrumentation" />
         <module name="java-kruft" />
         <module name="java-strings" />
@@ -42,6 +43,7 @@
       <module name="audio" target="1.7" />
       <module name="debug-logging" target="1.8" />
       <module name="dropwizard" target="1.8" />
+      <module name="file-timestamps" target="1.8" />
       <module name="instrumentation" target="1.8" />
       <module name="java-kruft" target="1.8" />
       <module name="java-strings" target="1.8" />
