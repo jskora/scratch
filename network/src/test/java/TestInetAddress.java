@@ -10,9 +10,7 @@ public class TestInetAddress {
 
     @Test(expected = UnknownHostException.class)
     public void testBadIPAddress() throws UnknownHostException {
-        final String BAD_IP = "300.300.300.300";
-        final InetAddress address = InetAddress.getByName(BAD_IP);
-        System.out.println("Address = " + address);
-        fail("Error, should throw UnknownHostException before reaching here");
+        final InetAddress address = InetAddress.getByName("300.300.300.300");
+        fail("Error, InetAddress(\"300.300.300.300\") returned " + address + " instead of throwing UnknownHostException");
     }
 }
