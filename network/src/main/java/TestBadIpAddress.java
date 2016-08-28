@@ -17,9 +17,14 @@ public class TestBadIpAddress {
         }
         System.out.println("----------------------------------------");
         System.out.println("running InetAddress.getByName(\"300.300.300.300\")");
-        final InetAddress address = InetAddress.getByName("300.300.300.300");
-        System.out.println("Error: InetAddress.getByName(\"300.300.300.300\") returned " + address
-                + " instead of throwing UnknownHostException");
+
+        try {
+            final InetAddress address = InetAddress.getByName("300.300.300.300");
+            System.out.println("FAIL: InetAddress.getByName(\"300.300.300.300\") returned " + address
+                    + " instead of throwing UnknownHostException");
+        } catch (UnknownHostException e) {
+            System.out.println("SUCCESS: InetAddress.getByName(\"300.300.300.300\") threw UnknownHostException");
+        }
     }
 
 }
