@@ -13,6 +13,6 @@ public class TestInetAddress {
         final String BAD_IP = "300.300.300.300";
         final InetAddress address = InetAddress.getByName(BAD_IP);
         System.out.println("Address = " + address);
-        fail("Should not reach here because of UnknownHostException");
+        fail("Error, should throw UnknownHostException before reaching here");
     }
 }
