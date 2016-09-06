@@ -4,8 +4,13 @@ import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.nio.file.DirectoryStream;
+import java.nio.file.FileVisitResult;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.nio.file.SimpleFileVisitor;
+import java.nio.file.attribute.BasicFileAttributes;
+import java.util.Iterator;
+import java.util.concurrent.atomic.AtomicInteger;
 
 public class DirectoryListingBench
 {
@@ -39,6 +44,16 @@ public class DirectoryListingBench
         }
         runtime.gc();
         try {
+            if (TEMP_DIR.exists()) {
+                Files.list(TEMP_DIR.toPath()).forEach(path -> {
+                    try {
+                        Files.delete(path);
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+                });
+                Files.delete(TEMP_DIR.toPath());
+            }
             Files.createDirectory(TEMP_DIR.toPath());
         } catch (IOException e) {
             e.printStackTrace();
@@ -54,6 +69,9 @@ public class DirectoryListingBench
             }
         }
 
+        /*
+        File.listFiles()
+         */
         int countListFiles = 0;
         long startListFiles = System.nanoTime();
         long beforeListFile = runtime.totalMemory() - runtime.freeMemory();
@@ -69,6 +87,9 @@ public class DirectoryListingBench
         long stopListFiles = System.nanoTime();
         long afterListFile = runtime.totalMemory() - runtime.freeMemory();
 
+        /*
+        Files.newDirectoryStream
+         */
         int countDirectoryStream = 0;
         long startDirectoryStream = System.nanoTime();
         long beforeDirectoryStream = runtime.totalMemory() - runtime.freeMemory();
@@ -86,6 +107,43 @@ public class DirectoryListingBench
         long stopDirectoryStream = System.nanoTime();
         long afterDirectoryStream = runtime.totalMemory() - runtime.freeMemory();
 
+        /*
+        Files.walkFileTree
+         */
+        int countWalkFileTree = 0;
+        long startWalkFileTree = System.nanoTime();
+        long beforeWalkFileTree = runtime.totalMemory() - runtime.freeMemory();
+        try {
+            CountingFileVisitor<Path> visitor = new CountingFileVisitor<>();
+            Files.walkFileTree(TEMP_DIR.toPath(), visitor);
+            countWalkFileTree = visitor.getCount();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        long stopWalkFileTree = System.nanoTime();
+        long afterWalkFileTree = runtime.totalMemory() - runtime.freeMemory();
+
+        /*
+        Files.list
+         */
+        AtomicInteger countFilesList = new AtomicInteger(0);
+        long startFilesList = System.nanoTime();
+        long beforeFilesList = runtime.totalMemory() - runtime.freeMemory();
+        try {
+            Files.list(TEMP_DIR.toPath()).forEach(path -> {
+                File pfile = path.toFile();
+                if (pfile.length() != 1) {
+                    System.out.println("file " + pfile.getName() + " size=" + pfile.length() + " not 1");
+                }
+                countFilesList.incrementAndGet();
+            });
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        long stopFilesList = System.nanoTime();
+        long afterFilesList = runtime.totalMemory() - runtime.freeMemory();
+
+
         System.out.println("      listFiles count=" + countListFiles
                 + " duration=" + (stopListFiles - startListFiles)
                 + " memory=" + beforeListFile + "-" + afterListFile
@@ -94,6 +152,14 @@ public class DirectoryListingBench
                 + " duration=" + (stopDirectoryStream - startDirectoryStream)
                 + " memory=" + beforeDirectoryStream + "-" + afterDirectoryStream
                 + " (" + (afterDirectoryStream - beforeDirectoryStream) + ")");
+        System.out.println("   walkFileTree count=" + countWalkFileTree
+                + " duration=" + (stopWalkFileTree - startWalkFileTree)
+                + " memory=" + beforeWalkFileTree + "-" + afterWalkFileTree
+                + " (" + (afterWalkFileTree - beforeWalkFileTree) + ")");
+        System.out.println("      filesList count=" + countFilesList
+                + " duration=" + (stopFilesList - startFilesList)
+                + " memory=" + beforeFilesList + "-" + afterFilesList
+                + " (" + (afterFilesList - beforeFilesList) + ")");
 
         /*
         Cleanup temp files
@@ -111,6 +177,23 @@ public class DirectoryListingBench
             Files.delete(TEMP_DIR.toPath());
         } catch (IOException e) {
             e.printStackTrace();
+        }
+    }
+
+    static private class CountingFileVisitor<T> extends SimpleFileVisitor<T> {
+        int count = 0;
+        @Override
+        public FileVisitResult visitFile(T file, BasicFileAttributes attrs) throws IOException {
+            File pfile = ((Path)file).toFile();
+            if (pfile.length() != 1) {
+                System.out.println("file " + pfile.getName() + " size=" + pfile.length() + " not 1");
+            }
+            count += 1;
+            return FileVisitResult.CONTINUE;
+        }
+
+        int getCount() {
+            return count;
         }
     }
 }
