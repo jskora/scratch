@@ -25,6 +25,7 @@
         <module>file-timestamps</module>
         <module>network</module>
         <module>file-listFiles</module>
+        <module>parsers</module>
     </modules>
 
     <build>
