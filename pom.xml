@@ -26,6 +26,7 @@
         <module>network</module>
         <module>file-listFiles</module>
         <module>parsers</module>
+        <module>management</module>
     </modules>
 
     <build>
