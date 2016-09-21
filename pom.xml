@@ -27,6 +27,7 @@
         <module>file-listFiles</module>
         <module>parsers</module>
         <module>management</module>
+        <module>executors</module>
     </modules>
 
     <build>

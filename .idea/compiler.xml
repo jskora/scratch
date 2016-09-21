@@ -24,6 +24,7 @@
         <processorPath useClasspath="true" />
         <module name="debug-logging" />
         <module name="dropwizard" />
+        <module name="executors" />
         <module name="file-listFiles" />
         <module name="file-timestamps" />
         <module name="instrumentation" />
@@ -47,6 +48,7 @@
       <module name="audio" target="1.7" />
       <module name="debug-logging" target="1.8" />
       <module name="dropwizard" target="1.8" />
+      <module name="executors" target="1.8" />
       <module name="file-listFiles" target="1.8" />
       <module name="file-timestamps" target="1.8" />
       <module name="instrumentation" target="1.8" />
