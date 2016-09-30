@@ -4,13 +4,16 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/debug-logging/debug-logging.iml" filepath="$PROJECT_DIR$/debug-logging/debug-logging.iml" />
       <module fileurl="file://$PROJECT_DIR$/dropwizard/dropwizard.iml" filepath="$PROJECT_DIR$/dropwizard/dropwizard.iml" />
+      <module fileurl="file://$PROJECT_DIR$/executors/executors.iml" filepath="$PROJECT_DIR$/executors/executors.iml" />
       <module fileurl="file://$PROJECT_DIR$/file-listFiles/file-listFiles.iml" filepath="$PROJECT_DIR$/file-listFiles/file-listFiles.iml" />
       <module fileurl="file://$PROJECT_DIR$/file-timestamps/file-timestamps.iml" filepath="$PROJECT_DIR$/file-timestamps/file-timestamps.iml" />
       <module fileurl="file://$PROJECT_DIR$/instrumentation/instrumentation.iml" filepath="$PROJECT_DIR$/instrumentation/instrumentation.iml" />
       <module fileurl="file://$PROJECT_DIR$/javaeight/javaeight.iml" filepath="$PROJECT_DIR$/javaeight/javaeight.iml" />
       <module fileurl="file://$PROJECT_DIR$/jsoup/jsoup.iml" filepath="$PROJECT_DIR$/jsoup/jsoup.iml" />
       <module fileurl="file://$PROJECT_DIR$/kruft/kruft.iml" filepath="$PROJECT_DIR$/kruft/kruft.iml" />
+      <module fileurl="file://$PROJECT_DIR$/management/management.iml" filepath="$PROJECT_DIR$/management/management.iml" />
       <module fileurl="file://$PROJECT_DIR$/network/network.iml" filepath="$PROJECT_DIR$/network/network.iml" />
+      <module fileurl="file://$PROJECT_DIR$/parsers/parsers.iml" filepath="$PROJECT_DIR$/parsers/parsers.iml" />
       <module fileurl="file://$PROJECT_DIR$/philosophers/philosophers.iml" filepath="$PROJECT_DIR$/philosophers/philosophers.iml" />
       <module fileurl="file://$PROJECT_DIR$/queues/queues.iml" filepath="$PROJECT_DIR$/queues/queues.iml" />
       <module fileurl="file://$PROJECT_DIR$/sample-maven-plugin/sample-maven-plugin.iml" filepath="$PROJECT_DIR$/sample-maven-plugin/sample-maven-plugin.iml" />
