@@ -39,6 +39,7 @@
         <module name="philosophers" />
         <module name="queues" />
         <module name="sample-maven-plugin" />
+        <module name="scratch-io" />
         <module name="strings" />
         <module name="tempfiles" />
         <module name="threading" />
@@ -65,6 +66,7 @@
       <module name="queues" target="1.7" />
       <module name="sample-maven-plugin" target="1.5" />
       <module name="scratch" target="1.8" />
+      <module name="scratch-io" target="1.8" />
       <module name="scratch-jsoup" target="1.8" />
       <module name="strings" target="1.8" />
       <module name="tempfiles" target="1.8" />

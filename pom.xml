@@ -28,6 +28,7 @@
         <module>parsers</module>
         <module>management</module>
         <module>executors</module>
+        <module>scratch-io</module>
     </modules>
 
     <build>
