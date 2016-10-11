@@ -19,6 +19,7 @@
       <module fileurl="file://$PROJECT_DIR$/sample-maven-plugin/sample-maven-plugin.iml" filepath="$PROJECT_DIR$/sample-maven-plugin/sample-maven-plugin.iml" />
       <module fileurl="file://$PROJECT_DIR$/scratch.iml" filepath="$PROJECT_DIR$/scratch.iml" />
       <module fileurl="file://$PROJECT_DIR$/scratch-io/scratch-io.iml" filepath="$PROJECT_DIR$/scratch-io/scratch-io.iml" />
+      <module fileurl="file://$PROJECT_DIR$/scratch-math/scratch-math.iml" filepath="$PROJECT_DIR$/scratch-math/scratch-math.iml" />
       <module fileurl="file://$PROJECT_DIR$/strings/strings.iml" filepath="$PROJECT_DIR$/strings/strings.iml" />
       <module fileurl="file://$PROJECT_DIR$/tempfiles/tempfiles.iml" filepath="$PROJECT_DIR$/tempfiles/tempfiles.iml" />
       <module fileurl="file://$PROJECT_DIR$/threading/threading.iml" filepath="$PROJECT_DIR$/threading/threading.iml" />

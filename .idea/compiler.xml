@@ -40,6 +40,7 @@
         <module name="queues" />
         <module name="sample-maven-plugin" />
         <module name="scratch-io" />
+        <module name="scratch-math" />
         <module name="strings" />
         <module name="tempfiles" />
         <module name="threading" />
@@ -68,6 +69,7 @@
       <module name="scratch" target="1.8" />
       <module name="scratch-io" target="1.8" />
       <module name="scratch-jsoup" target="1.8" />
+      <module name="scratch-math" target="1.8" />
       <module name="strings" target="1.8" />
       <module name="tempfiles" target="1.8" />
       <module name="threading" target="1.8" />

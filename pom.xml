@@ -30,6 +30,7 @@
         <module>executors</module>
         <module>reflection</module>
         <module>scratch-io</module>
+        <module>scratch-math</module>
     </modules>
 
     <build>
