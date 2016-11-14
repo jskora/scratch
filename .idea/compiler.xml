@@ -24,6 +24,8 @@
         <processorPath useClasspath="true" />
         <module name="debug-logging" />
         <module name="dropwizard" />
+        <module name="executors" />
+        <module name="file-listFiles" />
         <module name="file-timestamps" />
         <module name="instrumentation" />
         <module name="java-kruft" />
@@ -31,10 +33,15 @@
         <module name="javaeight" />
         <module name="jsoup" />
         <module name="kruft" />
+        <module name="management" />
         <module name="network" />
+        <module name="parsers" />
         <module name="philosophers" />
+        <module name="properties" />
         <module name="queues" />
         <module name="sample-maven-plugin" />
+        <module name="scratch-io" />
+        <module name="scratch-math" />
         <module name="strings" />
         <module name="tempfiles" />
         <module name="threading" />
@@ -44,6 +51,8 @@
       <module name="audio" target="1.7" />
       <module name="debug-logging" target="1.8" />
       <module name="dropwizard" target="1.8" />
+      <module name="executors" target="1.8" />
+      <module name="file-listFiles" target="1.8" />
       <module name="file-timestamps" target="1.8" />
       <module name="instrumentation" target="1.8" />
       <module name="java-kruft" target="1.8" />
@@ -52,12 +61,17 @@
       <module name="jfskora.scratch.audio" target="1.7" />
       <module name="jsoup" target="1.8" />
       <module name="kruft" target="1.8" />
+      <module name="management" target="1.8" />
       <module name="network" target="1.8" />
+      <module name="parsers" target="1.8" />
       <module name="philosophers" target="1.8" />
+      <module name="properties" target="1.8" />
       <module name="queues" target="1.7" />
       <module name="sample-maven-plugin" target="1.5" />
       <module name="scratch" target="1.8" />
+      <module name="scratch-io" target="1.8" />
       <module name="scratch-jsoup" target="1.8" />
+      <module name="scratch-math" target="1.8" />
       <module name="strings" target="1.8" />
       <module name="tempfiles" target="1.8" />
       <module name="threading" target="1.8" />
