@@ -22,6 +22,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
+        <module name="collections" />
         <module name="debug-logging" />
         <module name="dropwizard" />
         <module name="executors" />
@@ -49,6 +50,7 @@
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="audio" target="1.7" />
+      <module name="collections" target="1.8" />
       <module name="debug-logging" target="1.8" />
       <module name="dropwizard" target="1.8" />
       <module name="executors" target="1.8" />
