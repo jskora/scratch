@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/collections/collections.iml" filepath="$PROJECT_DIR$/collections/collections.iml" />
       <module fileurl="file://$PROJECT_DIR$/debug-logging/debug-logging.iml" filepath="$PROJECT_DIR$/debug-logging/debug-logging.iml" />
       <module fileurl="file://$PROJECT_DIR$/dropwizard/dropwizard.iml" filepath="$PROJECT_DIR$/dropwizard/dropwizard.iml" />
       <module fileurl="file://$PROJECT_DIR$/executors/executors.iml" filepath="$PROJECT_DIR$/executors/executors.iml" />
