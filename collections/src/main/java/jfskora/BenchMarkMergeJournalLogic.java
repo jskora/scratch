@@ -35,6 +35,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.PriorityQueue;
+import java.util.Set;
 import java.util.SortedMap;
 import java.util.TreeMap;
 
@@ -550,6 +551,7 @@ public class BenchMarkMergeJournalLogic {
         return DatatypeConverter.printHexBinary(md.digest());
     }
 
+    @SuppressWarnings("SameParameterValue")
     private static FlowFile createFlowFile(final long id, final long fileSize, final Map<String, String> attributes) {
         final Map<String, String> attrCopy = new HashMap<>(attributes);
 
@@ -575,6 +577,11 @@ public class BenchMarkMergeJournalLogic {
             }
 
             @Override
+            public Set<String> getLineageIdentifiers() {
+                return null;
+            }
+
+            @Override
             public boolean isPenalized() {
                 return false;
             }
@@ -596,16 +603,6 @@ public class BenchMarkMergeJournalLogic {
 
             @Override
             public int compareTo(@SuppressWarnings("NullableProblems") final FlowFile o) {
-                return 0;
-            }
-
-            @Override
-            public long getLineageStartIndex() {
-                return 0;
-            }
-
-            @Override
-            public long getQueueDateIndex() {
                 return 0;
             }
         };

@@ -33,6 +33,7 @@
         <module>scratch-io</module>
         <module>scratch-math</module>
         <module>properties</module>
+        <module>rest</module>
     </modules>
 
     <build>
