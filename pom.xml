@@ -25,7 +25,7 @@
         <module>file-timestamps</module>
         <module>network</module>
         <module>collections</module>
-        <module>file-listFiles</module>
+        <module>file-stuff</module>
         <module>parsers</module>
         <module>management</module>
         <module>executors</module>
@@ -33,6 +33,7 @@
         <module>scratch-io</module>
         <module>scratch-math</module>
         <module>properties</module>
+        <module>rest</module>
     </modules>
 
     <build>
