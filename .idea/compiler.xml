@@ -19,6 +19,7 @@
         <module name="javaeight" />
         <module name="jsoup" />
         <module name="kruft" />
+        <module name="logging-slf4j" />
         <module name="management" />
         <module name="network" />
         <module name="parsers" />
@@ -50,12 +51,13 @@
       <module name="jfskora.scratch.audio" target="1.7" />
       <module name="jsoup" target="1.8" />
       <module name="kruft" target="1.8" />
+      <module name="logging-slf4j" target="1.8" />
       <module name="management" target="1.8" />
       <module name="network" target="1.8" />
       <module name="parsers" target="1.8" />
       <module name="philosophers" target="1.8" />
       <module name="properties" target="1.8" />
-      <module name="queues" target="1.7" />
+      <module name="queues" target="1.8" />
       <module name="rest" target="1.8" />
       <module name="sample-maven-plugin" target="1.5" />
       <module name="scratch" target="1.8" />

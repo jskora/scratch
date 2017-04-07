@@ -34,6 +34,7 @@
         <module>scratch-math</module>
         <module>properties</module>
         <module>rest</module>
+        <module>logging-slf4j</module>
     </modules>
 
     <build>
