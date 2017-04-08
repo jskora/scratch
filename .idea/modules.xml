@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/audio/audio.iml" filepath="$PROJECT_DIR$/audio/audio.iml" />
       <module fileurl="file://$PROJECT_DIR$/collections/collections.iml" filepath="$PROJECT_DIR$/collections/collections.iml" />
       <module fileurl="file://$PROJECT_DIR$/debug-logging/debug-logging.iml" filepath="$PROJECT_DIR$/debug-logging/debug-logging.iml" />
       <module fileurl="file://$PROJECT_DIR$/dropwizard/dropwizard.iml" filepath="$PROJECT_DIR$/dropwizard/dropwizard.iml" />
@@ -18,6 +19,7 @@
       <module fileurl="file://$PROJECT_DIR$/philosophers/philosophers.iml" filepath="$PROJECT_DIR$/philosophers/philosophers.iml" />
       <module fileurl="file://$PROJECT_DIR$/properties/properties.iml" filepath="$PROJECT_DIR$/properties/properties.iml" />
       <module fileurl="file://$PROJECT_DIR$/queues/queues.iml" filepath="$PROJECT_DIR$/queues/queues.iml" />
+      <module fileurl="file://$PROJECT_DIR$/reflection/reflection.iml" filepath="$PROJECT_DIR$/reflection/reflection.iml" />
       <module fileurl="file://$PROJECT_DIR$/rest/rest.iml" filepath="$PROJECT_DIR$/rest/rest.iml" />
       <module fileurl="file://$PROJECT_DIR$/sample-maven-plugin/sample-maven-plugin.iml" filepath="$PROJECT_DIR$/sample-maven-plugin/sample-maven-plugin.iml" />
       <module fileurl="file://$PROJECT_DIR$/scratch.iml" filepath="$PROJECT_DIR$/scratch.iml" />

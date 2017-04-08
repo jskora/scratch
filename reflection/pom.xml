@@ -10,7 +10,6 @@
     <artifactId>reflection</artifactId>
     <packaging>jar</packaging>
 
-    <name>reflection</name>
     <url>http://maven.apache.org</url>
 
     <properties>

@@ -10,30 +10,30 @@
     <version>1.0-SNAPSHOT</version>
     <modules>
         <module>audio</module>
-        <module>queues</module>
-        <module>debug-logging</module>
-        <module>kruft</module>
-        <module>sample-maven-plugin</module>
-        <module>javaeight</module>
-        <module>tempfiles</module>
-        <module>jsoup</module>
-        <module>philosophers</module>
-        <module>strings</module>
-        <module>threading</module>
-        <module>dropwizard</module>
-        <module>instrumentation</module>
-        <module>file-timestamps</module>
-        <module>network</module>
         <module>collections</module>
-        <module>file-stuff</module>
-        <module>parsers</module>
-        <module>management</module>
+        <module>debug-logging</module>
+        <module>dropwizard</module>
         <module>executors</module>
+        <module>file-stuff</module>
+        <module>file-timestamps</module>
+        <module>instrumentation</module>
+        <module>javaeight</module>
+        <module>jsoup</module>
+        <module>kruft</module>
+        <module>management</module>
+        <module>network</module>
+        <module>parsers</module>
+        <module>philosophers</module>
+        <module>properties</module>
+        <module>queues</module>
         <module>reflection</module>
+        <module>rest</module>
+        <module>sample-maven-plugin</module>
         <module>scratch-io</module>
         <module>scratch-math</module>
-        <module>properties</module>
-        <module>rest</module>
+        <module>strings</module>
+        <module>tempfiles</module>
+        <module>threading</module>
     </modules>
 
     <build>
