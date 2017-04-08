@@ -13,6 +13,7 @@
       <module fileurl="file://$PROJECT_DIR$/javaeight/javaeight.iml" filepath="$PROJECT_DIR$/javaeight/javaeight.iml" />
       <module fileurl="file://$PROJECT_DIR$/jsoup/jsoup.iml" filepath="$PROJECT_DIR$/jsoup/jsoup.iml" />
       <module fileurl="file://$PROJECT_DIR$/kruft/kruft.iml" filepath="$PROJECT_DIR$/kruft/kruft.iml" />
+      <module fileurl="file://$PROJECT_DIR$/logging-slf4j/logging-slf4j.iml" filepath="$PROJECT_DIR$/logging-slf4j/logging-slf4j.iml" />
       <module fileurl="file://$PROJECT_DIR$/management/management.iml" filepath="$PROJECT_DIR$/management/management.iml" />
       <module fileurl="file://$PROJECT_DIR$/network/network.iml" filepath="$PROJECT_DIR$/network/network.iml" />
       <module fileurl="file://$PROJECT_DIR$/parsers/parsers.iml" filepath="$PROJECT_DIR$/parsers/parsers.iml" />

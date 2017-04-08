@@ -34,6 +34,9 @@
         <module>strings</module>
         <module>tempfiles</module>
         <module>threading</module>
+        <module>properties</module>
+        <module>rest</module>
+        <module>logging-slf4j</module>
     </modules>
 
     <build>

@@ -67,6 +67,14 @@ public class BenchMarkMergeJournalLogic {
         optEvents.setRequired(false);
         options.addOption(optEvents);
 
+        Option optFiles = new Option("f", "files", true, "list folder and files");
+        optFiles.setRequired(false);
+        options.addOption(optFiles);
+
+        Option optGC = new Option("g", "gc", true, "attempt garbage collection");
+        optEvents.setRequired(false);
+        options.addOption(optGC);
+
         Option optIterations = new Option("i", "iterations", true, "number of iterations within a run");
         optIterations.setRequired(false);
         options.addOption(optIterations);
@@ -100,9 +108,11 @@ public class BenchMarkMergeJournalLogic {
         int pIterations = (cmd.hasOption("iterations") ? Integer.parseInt(cmd.getOptionValue("iterations")) : DEFAULT_NUM_ITERATIONS);
         int pRuns = (cmd.hasOption("runs") ? Integer.parseInt(cmd.getOptionValue("runs")) : DEFAULT_NUM_RUNS);
         int pEvents = (cmd.hasOption("events") ? Integer.parseInt(cmd.getOptionValue("events")) : DEFAULT_NUM_EVENTS);
+        boolean pGC = (cmd.hasOption("gc") && Boolean.parseBoolean(cmd.getOptionValue("gc")));
+        boolean pFiles = (cmd.hasOption("files") && Boolean.parseBoolean(cmd.getOptionValue("files")));
 
         BenchMarkMergeJournalLogic tester = new BenchMarkMergeJournalLogic(pJournals, DEFAULT_NUM_TESTS,
-                pRuns, pIterations, DEFAULT_BASE_EVENT_ID, pEvents);
+                pRuns, pIterations, DEFAULT_BASE_EVENT_ID, pEvents, pGC, pFiles);
         if (cmd.hasOption("test")) {
             int pTestIndex = Integer.parseInt(cmd.getOptionValue("test"));
             tester.single(pTestIndex);
@@ -117,16 +127,21 @@ public class BenchMarkMergeJournalLogic {
     private int numRuns;
     private int baseEventId;
     private int numEvents;
+    private boolean attemptGC;
+    private boolean showFiles;
     private Runtime runtime;
 
     private BenchMarkMergeJournalLogic(int numJournals, int numTests, int numRuns, int numIterations,
-                                       int baseEventId, int numEvents) throws IOException {
+                                       int baseEventId, int numEvents, boolean attemptGC,
+                                       boolean showFiles) throws IOException {
         this.numJournals = numJournals;
         this.numTests = numTests;
         this.numRuns = numRuns;
         this.numIterations = numIterations;
         this.baseEventId = baseEventId;
         this.numEvents = numEvents;
+        this.attemptGC = attemptGC;
+        this.showFiles = showFiles;
 
         this.journalFiles = new File[this.numJournals];
         this.mergeFiles = new File[this.numTests][this.numRuns];
@@ -144,8 +159,10 @@ public class BenchMarkMergeJournalLogic {
             writeJournals();
 
             List<Long> result = Arrays.asList(0L, 0L, 0L);
-            runtime.gc();
-            Thread.sleep(100L);
+            if (this.attemptGC) {
+                runtime.gc();
+                Thread.sleep(100L);
+            }
             long m0 = runtime.totalMemory() - runtime.freeMemory();
             for (int iteration = 0; iteration < numIterations; iteration++) {
                 result = run(testIndex, mergeFiles[testIndex][run]);
@@ -482,7 +499,9 @@ public class BenchMarkMergeJournalLogic {
                 Files.delete(journalFiles[i].toPath());
             }
         }
-        System.out.println("journalFiles=" + StringUtils.join(journalFiles, ", "));
+        if (this.showFiles) {
+            System.out.println("journalFiles=" + StringUtils.join(journalFiles, ", "));
+        }
 
         for (int i = 0; i < numTests; i++) {
             for (int j = 0; j < numRuns; j++) {
@@ -492,14 +511,16 @@ public class BenchMarkMergeJournalLogic {
                 }
             }
         }
-        System.out.print("mergeFiles=");
-        for (int i = 0; i < mergeFiles.length; i++) {
-            if (i > 0) {
-                System.out.print(", ");
+        if (this.showFiles) {
+            System.out.print("mergeFiles=");
+            for (int i = 0; i < mergeFiles.length; i++) {
+                if (i > 0) {
+                    System.out.print(", ");
+                }
+                System.out.print(mergeFiles[i][0]);
             }
-            System.out.print(mergeFiles[i][0]);
+            System.out.println("");
         }
-        System.out.println("");
     }
 
     private void writeJournals() throws IOException {
