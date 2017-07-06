@@ -18,7 +18,7 @@ public class LazyStreams {
         System.out.println();
         System.out.println();
 
-        // outputs "1, 1, 1, 1, 2"
+        // outputs "1, 1, 1, 1, 2" because the earlier limit() forces less lazy evaluation
         Stream.iterate(0, i -> i + 1)
                 .flatMap(i -> Stream.of(i, i, i, i))
                 .limit(5)
