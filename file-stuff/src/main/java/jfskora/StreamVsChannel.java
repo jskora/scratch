@@ -48,19 +48,19 @@ public class StreamVsChannel {
         System.out.println("readBufferedInputStream " + srcFile.getName() + " read " + bytes + " bytes");
     }
 
-    private void readChannel(File srcFile) throws IOException {
-        final Channel channelIn = new F
-        byte[] buffer = new byte[totalBytes];
-        long bytes = 0;
-        while (true) {
-            int bytesRead = bufIn.read(buffer);
-            if (bytesRead == -1) {
-                break;
-            }
-            bytes += bytesRead;
-        }
-        System.out.println("readBufferedInputStream " + srcFile.getName() + " read " + bytes + " bytes");
-    }
+//    private void readChannel(File srcFile) throws IOException {
+//        final Channel channelIn = new F
+//        byte[] buffer = new byte[totalBytes];
+//        long bytes = 0;
+//        while (true) {
+//            int bytesRead = bufIn.read(buffer);
+//            if (bytesRead == -1) {
+//                break;
+//            }
+//            bytes += bytesRead;
+//        }
+//        System.out.println("readBufferedInputStream " + srcFile.getName() + " read " + bytes + " bytes");
+//    }
 
     private void makeTempFile(String filename) {
         if (!Files.exists(new File(filename).toPath())) {
