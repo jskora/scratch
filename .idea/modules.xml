@@ -2,18 +2,30 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/audio/audio.iml" filepath="$PROJECT_DIR$/audio/audio.iml" />
+      <module fileurl="file://$PROJECT_DIR$/collections/collections.iml" filepath="$PROJECT_DIR$/collections/collections.iml" />
       <module fileurl="file://$PROJECT_DIR$/debug-logging/debug-logging.iml" filepath="$PROJECT_DIR$/debug-logging/debug-logging.iml" />
       <module fileurl="file://$PROJECT_DIR$/dropwizard/dropwizard.iml" filepath="$PROJECT_DIR$/dropwizard/dropwizard.iml" />
+      <module fileurl="file://$PROJECT_DIR$/executors/executors.iml" filepath="$PROJECT_DIR$/executors/executors.iml" />
+      <module fileurl="file://$PROJECT_DIR$/file-stuff/file-stuff.iml" filepath="$PROJECT_DIR$/file-stuff/file-stuff.iml" />
       <module fileurl="file://$PROJECT_DIR$/file-timestamps/file-timestamps.iml" filepath="$PROJECT_DIR$/file-timestamps/file-timestamps.iml" />
       <module fileurl="file://$PROJECT_DIR$/instrumentation/instrumentation.iml" filepath="$PROJECT_DIR$/instrumentation/instrumentation.iml" />
       <module fileurl="file://$PROJECT_DIR$/javaeight/javaeight.iml" filepath="$PROJECT_DIR$/javaeight/javaeight.iml" />
       <module fileurl="file://$PROJECT_DIR$/jsoup/jsoup.iml" filepath="$PROJECT_DIR$/jsoup/jsoup.iml" />
       <module fileurl="file://$PROJECT_DIR$/kruft/kruft.iml" filepath="$PROJECT_DIR$/kruft/kruft.iml" />
+      <module fileurl="file://$PROJECT_DIR$/logging-slf4j/logging-slf4j.iml" filepath="$PROJECT_DIR$/logging-slf4j/logging-slf4j.iml" />
+      <module fileurl="file://$PROJECT_DIR$/management/management.iml" filepath="$PROJECT_DIR$/management/management.iml" />
       <module fileurl="file://$PROJECT_DIR$/network/network.iml" filepath="$PROJECT_DIR$/network/network.iml" />
+      <module fileurl="file://$PROJECT_DIR$/parsers/parsers.iml" filepath="$PROJECT_DIR$/parsers/parsers.iml" />
       <module fileurl="file://$PROJECT_DIR$/philosophers/philosophers.iml" filepath="$PROJECT_DIR$/philosophers/philosophers.iml" />
+      <module fileurl="file://$PROJECT_DIR$/properties/properties.iml" filepath="$PROJECT_DIR$/properties/properties.iml" />
       <module fileurl="file://$PROJECT_DIR$/queues/queues.iml" filepath="$PROJECT_DIR$/queues/queues.iml" />
+      <module fileurl="file://$PROJECT_DIR$/reflection/reflection.iml" filepath="$PROJECT_DIR$/reflection/reflection.iml" />
+      <module fileurl="file://$PROJECT_DIR$/rest/rest.iml" filepath="$PROJECT_DIR$/rest/rest.iml" />
       <module fileurl="file://$PROJECT_DIR$/sample-maven-plugin/sample-maven-plugin.iml" filepath="$PROJECT_DIR$/sample-maven-plugin/sample-maven-plugin.iml" />
       <module fileurl="file://$PROJECT_DIR$/scratch.iml" filepath="$PROJECT_DIR$/scratch.iml" />
+      <module fileurl="file://$PROJECT_DIR$/scratch-io/scratch-io.iml" filepath="$PROJECT_DIR$/scratch-io/scratch-io.iml" />
+      <module fileurl="file://$PROJECT_DIR$/scratch-math/scratch-math.iml" filepath="$PROJECT_DIR$/scratch-math/scratch-math.iml" />
       <module fileurl="file://$PROJECT_DIR$/strings/strings.iml" filepath="$PROJECT_DIR$/strings/strings.iml" />
       <module fileurl="file://$PROJECT_DIR$/tempfiles/tempfiles.iml" filepath="$PROJECT_DIR$/tempfiles/tempfiles.iml" />
       <module fileurl="file://$PROJECT_DIR$/threading/threading.iml" filepath="$PROJECT_DIR$/threading/threading.iml" />

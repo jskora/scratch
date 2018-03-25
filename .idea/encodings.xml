@@ -2,15 +2,25 @@
 <project version="4">
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$/audio" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/collections" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/debug-logging" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/dropwizard" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/executors" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/file-stuff" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/file-timestamps" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/javaeight" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/jsoup" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/kruft" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/logging-slf4j" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/management" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/parsers" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/philosophers" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/properties" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/queues" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/reflection" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/sample-maven-plugin" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/scratch-io" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/scratch-math" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/strings" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/tempfiles" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/threading" charset="UTF-8" />
