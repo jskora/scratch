@@ -29,16 +29,17 @@
 
 ## File-based project format:
 *.iws
+*.iml
+.idea
 
 ## Plugin-specific files:
 
 # IntelliJ
 /out/
+/target
 
 # mpeltonen/sbt-idea plugin
 .idea_modules/
-
-*.iml
 
 # JIRA plugin
 atlassian-ide-plugin.xml
