@@ -9,14 +9,13 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.SimpleFileVisitor;
 import java.nio.file.attribute.BasicFileAttributes;
-import java.util.Iterator;
 import java.util.concurrent.atomic.AtomicInteger;
 
 public class DirectoryListingBench
 {
-    private static final File TEMP_DIR = new File("/local/jfskora/bench");
+    private static final File TEMP_DIR = new File("/nifi1/tmp/jfskora/bench");
     private static final String FILE_SEPARATOR = System.getProperty("file.separator");
-    private static final Integer[] FILE_COUNTS = new Integer[]{100, 1_000, 10_000, 100_000, 200_000, 500_000, 750_000, 1_000_000};
+    private static final Integer[] FILE_COUNTS = new Integer[]{100, 1_000, 10_000, 100_000, 200_000 /*, 500_000, 750_000, 1_000_000 */ };
     private static final Runtime runtime = Runtime.getRuntime();
 
     public static void main(String[] args) {
@@ -45,6 +44,7 @@ public class DirectoryListingBench
         runtime.gc();
         try {
             if (TEMP_DIR.exists()) {
+// JAVA 8
                 Files.list(TEMP_DIR.toPath()).forEach(path -> {
                     try {
                         Files.delete(path);
@@ -52,6 +52,11 @@ public class DirectoryListingBench
                         e.printStackTrace();
                     }
                 });
+// JAVA 7
+//                for (File file : TEMP_DIR.listFiles()) {
+//                    file.delete();
+//                }
+// JAVA 7/8
                 Files.delete(TEMP_DIR.toPath());
             }
             Files.createDirectory(TEMP_DIR.toPath());
@@ -123,6 +128,7 @@ public class DirectoryListingBench
         long stopWalkFileTree = System.nanoTime();
         long afterWalkFileTree = runtime.totalMemory() - runtime.freeMemory();
 
+// JAVA 8
         /*
         Files.list
          */
@@ -142,7 +148,7 @@ public class DirectoryListingBench
         }
         long stopFilesList = System.nanoTime();
         long afterFilesList = runtime.totalMemory() - runtime.freeMemory();
-
+// JAVA 7/8
 
         System.out.println("      listFiles count=" + countListFiles
                 + " duration=" + (stopListFiles - startListFiles)
@@ -156,10 +162,12 @@ public class DirectoryListingBench
                 + " duration=" + (stopWalkFileTree - startWalkFileTree)
                 + " memory=" + beforeWalkFileTree + "-" + afterWalkFileTree
                 + " (" + (afterWalkFileTree - beforeWalkFileTree) + ")");
+// JAVA 8
         System.out.println("      filesList count=" + countFilesList
                 + " duration=" + (stopFilesList - startFilesList)
                 + " memory=" + beforeFilesList + "-" + afterFilesList
                 + " (" + (afterFilesList - beforeFilesList) + ")");
+// JAVA 7/8
 
         /*
         Cleanup temp files
