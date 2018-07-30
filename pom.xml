@@ -37,6 +37,7 @@
         <module>properties</module>
         <module>rest</module>
         <module>logging-slf4j</module>
+        <module>general</module>
     </modules>
 
     <build>
