@@ -75,7 +75,7 @@ public class TestTreeMap {
         total += 3.0; map.put(total, "three");
         total += 2.5; map.put(total, "two point five");
         assertNotNull(map.ceilingEntry(1.0));
-        assertNull(map.ceilingEntry(6.0));
+        assertNull(map.ceilingEntry(16.0));
     }
 
 
