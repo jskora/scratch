@@ -1,7 +1,9 @@
 package scratch.storm;
 
+import lombok.extern.slf4j.Slf4j;
 import org.apache.storm.Config;
 import org.apache.storm.LocalCluster;
+import org.apache.storm.shade.com.google.common.base.Strings;
 import org.apache.storm.spout.SpoutOutputCollector;
 import org.apache.storm.task.OutputCollector;
 import org.apache.storm.task.TopologyContext;
@@ -18,21 +20,29 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
 
+@Slf4j
 public class Example1 {
 
+    private static final Integer MAXWORDS = 4;
+
     public static void main(String[] args) {
+        log.info("**********************");
+        log.info("*** Example1.run() ***");
+        log.info("**********************");
         new Example1().run();
     }
 
-    void run() {
+    private void run() {
         Config config = new Config();
         config.setDebug(false);
         config.setNumWorkers(1);
 
         TopologyBuilder builder = new TopologyBuilder();
-        builder.setSpout("words", new WordSpout().setMax(4), 1);
-        builder.setBolt("dumps", new DumpBolt(), 1)
-                .shuffleGrouping("words");
+        WordSpout wordSpout = new WordSpout();
+        DumpBolt dumpBolt = new DumpBolt();
+
+        builder.setSpout("wordspout", wordSpout, 1);
+        builder.setBolt("dumps", new DumpBolt(), 1).shuffleGrouping("wordspout");
 
         LocalCluster cluster = new LocalCluster();
         cluster.submitTopology("test", config, builder.createTopology());
@@ -42,34 +52,10 @@ public class Example1 {
         cluster.shutdown();
     }
 
-    public static class DumpBolt extends BaseRichBolt {
-
-        static final long serialVersionUID = 2L;
-
-        private transient OutputCollector _collector;
-
-        @Override
-        public void prepare(Map map, TopologyContext topologyContext, OutputCollector outputCollector) {
-            _collector = outputCollector;
-        }
-
-        @Override
-        public void execute(Tuple tuple) {
-            System.err.println(tuple.getMessageId() + " = " + tuple.getValueByField("word"));
-        }
-
-        @Override
-        public void declareOutputFields(OutputFieldsDeclarer outputFieldsDeclarer) {
-            outputFieldsDeclarer.declare(new Fields());
-        }
-    }
-
     public static class WordSpout extends BaseRichSpout {
-
-        private List<String> words = Arrays.asList("one", "two", "three", "four", "five", "six", "seven");
+        private List<String> wordList = Arrays.asList("one", "two", "three", "four", "five", "six", "seven");
         private SpoutOutputCollector _collector;
-        private int index;
-        private Integer _max;
+        private Integer index;
 
         @Override
         public void open(Map map, TopologyContext topologyContext, SpoutOutputCollector spoutOutputCollector) {
@@ -77,16 +63,13 @@ public class Example1 {
             index = 0;
         }
 
-        public WordSpout setMax(Integer max) {
-            _max = max;
-            return this;
-        }
-
         @Override
         public void nextTuple() {
-            Utils.sleep(1000);
-            if (index < _max) {
-                _collector.emit(new Values(words.get(index++ % words.size())));
+            Utils.sleep(100);
+            if (index < MAXWORDS) {
+                final String word = Strings.padEnd(wordList.get(index++ % wordList.size()), 5, ' ');
+                log.info("emitting word={} id={} max={}", word, index);
+                _collector.emit(new Values(word));
             }
         }
 
@@ -96,4 +79,25 @@ public class Example1 {
         }
     }
 
+    public static class DumpBolt extends BaseRichBolt {
+        private int i = 0;
+        private transient OutputCollector _collector;
+
+        @Override
+        public void prepare(Map map, TopologyContext topologyContext, OutputCollector outputCollector) {
+            _collector = outputCollector;
+        }
+
+        @Override
+        public void execute(Tuple tuple) {
+            i++;
+            final String word = tuple.getStringByField("word");
+            log.info("dumping word={} i={}", word, i);
+        }
+
+        @Override
+        public void declareOutputFields(OutputFieldsDeclarer outputFieldsDeclarer) {
+            outputFieldsDeclarer.declare(new Fields());
+        }
+    }
 }
