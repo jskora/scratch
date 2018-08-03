@@ -37,7 +37,7 @@
         <module>logging-slf4j</module>
         <module>general</module>
         <module>storm</module>
-        <module>intellij</module>
+        <module>utility</module>
     </modules>
 
     <build>
