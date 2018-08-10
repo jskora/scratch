@@ -38,6 +38,10 @@
         <module>general</module>
         <module>storm</module>
         <module>utility</module>
+        <module>immutables</module>
+        <module>functional</module>
+        <module>jackson</module>
+        <module>asm</module>
     </modules>
 
     <build>
