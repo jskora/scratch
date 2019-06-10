@@ -19,7 +19,6 @@
         <module>instrumentation</module>
         <module>javaeight</module>
         <module>jsoup</module>
-        <module>kruft</module>
         <module>management</module>
         <module>network</module>
         <module>parsers</module>
@@ -42,6 +41,7 @@
         <module>functional</module>
         <module>jackson</module>
         <module>asm</module>
+        <module>guava</module>
     </modules>
 
     <build>
