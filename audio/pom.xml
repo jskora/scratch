@@ -10,7 +10,9 @@
     <artifactId>audio</artifactId>
     <packaging>jar</packaging>
 
+    <!--
     <name>audio</name>
+    -->
 
     <build>
         <plugins>
