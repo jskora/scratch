@@ -44,6 +44,7 @@
         <module>asm</module>
         <module>hdfs-inotify</module>
         <module>memory-args</module>
+        <module>guava</module>
     </modules>
 
     <build>
