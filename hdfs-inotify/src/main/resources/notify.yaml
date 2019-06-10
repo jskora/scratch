@@ -1,0 +1,11 @@
+hadoop-config-defaults: &hadoop-config-defaults
+    #Only change to use local fs for dev/testing purposes.
+    use-local: true
+    root-dir: /tmp/bdp-ingest
+    resources:
+        - "/Users/jskora/cluster/hadoop-2.7.3/etc/hadoop/core-site.xml"
+        - "/Users/jskora/cluster/hadoop-2.7.3/etc/hadoop/hdfs-site.xml"
+
+directory-poll:
+    hadoop:
+        <<: *hadoop-config-defaults

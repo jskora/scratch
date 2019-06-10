@@ -329,10 +329,10 @@
   <action id="CollapseBlock"/>
   <action id="ShowFilePath"/>
 
-  <action id="tasks.goto">
+  <action id="numTasks.goto">
     <keyboard-shortcut first-keystroke="alt meta F12"/>
   </action>
-  <action id="tasks.switch">
+  <action id="numTasks.switch">
     <keyboard-shortcut first-keystroke="meta F9"/>
   </action>
   <action id="RunDashboard.ShowConfigurations">

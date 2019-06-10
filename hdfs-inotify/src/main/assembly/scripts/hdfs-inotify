@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+SCRIPT_DIR=$( cd "$( dirname "${BASH_SOURCE[0]}" )"/.. && pwd )
+
+java -cp "${SCRIPT_DIR}/lib/*:/opt/hadoop/hadoop-current/etc/hadoop/" bdp.services.hdfs.inotify.HdfsInotify --kronos-config /opt/bdp/ingest/ingest-pipelines/conf/kronos-config.yaml "$@"

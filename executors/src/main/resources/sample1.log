@@ -1,0 +1,607 @@
+/Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home/bin/java "-javaagent:/Applications/IntelliJ IDEA.app/Contents/lib/idea_rt.jar=58477:/Applications/IntelliJ IDEA.app/Contents/bin" -Dfile.encoding=UTF-8 -classpath /Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home/jre/lib/charsets.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home/jre/lib/deploy.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home/jre/lib/ext/cldrdata.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home/jre/lib/ext/dnsns.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home/jre/lib/ext/jaccess.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home/jre/lib/ext/jfxrt.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home/jre/lib/ext/localedata.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home/jre/lib/ext/nashorn.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home/jre/lib/ext/sunec.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home/jre/lib/ext/sunjce_provider.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home/jre/lib/ext/sunpkcs11.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home/jre/lib/ext/zipfs.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home/jre/lib/javaws.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home/jre/lib/jce.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home/jre/lib/jfr.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home/jre/lib/jfxswt.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home/jre/lib/jsse.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home/jre/lib/management-agent.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home/jre/lib/plugin.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home/jre/lib/resources.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home/jre/lib/rt.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home/lib/ant-javafx.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home/lib/dt.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home/lib/javafx-mx.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home/lib/jconsole.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home/lib/packager.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home/lib/sa-jdi.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home/lib/tools.jar:/Users/jskora/git/jskora/scratch/executors/target/classes:/Users/jskora/.m2/repository/org/slf4j/slf4j-api/1.7.25/slf4j-api-1.7.25.jar:/Users/jskora/.m2/repository/org/slf4j/slf4j-log4j12/1.7.25/slf4j-log4j12-1.7.25.jar:/Users/jskora/.m2/repository/log4j/log4j/1.2.17/log4j-1.2.17.jar jfskora.ExecutorsAndFutures
+19/05/25 22:40:28 INFO ExecutorsAndFutures: main starting (logger)
+main starting (sysout)
+19/05/25 22:40:28 INFO ExecutorsAndFutures: creating and submitting tasks
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task starting      7-hotel             pool-1-thread-8
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task starting      0-alpha             pool-1-thread-1
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task starting       4-echo             pool-1-thread-5
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task stopping      0-alpha             pool-1-thread-1
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task starting      8-india             pool-1-thread-1
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task starting      1-bravo             pool-1-thread-2
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task starting    5-foxtrot             pool-1-thread-6
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task starting      3-delta             pool-1-thread-4
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task starting    2-charlie             pool-1-thread-3
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task starting       6-golf             pool-1-thread-7
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task finished                  0-alpha (199 remain)
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task stopping       4-echo             pool-1-thread-5
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task starting    9-juliett             pool-1-thread-5
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task finished                   4-echo (198 remain)
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task stopping    2-charlie             pool-1-thread-3
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task stopping    9-juliett             pool-1-thread-5
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task stopping      8-india             pool-1-thread-1
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task stopping      1-bravo             pool-1-thread-2
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task starting      12-mike             pool-1-thread-1
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task stopping    5-foxtrot             pool-1-thread-6
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task stopping      12-mike             pool-1-thread-1
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task starting  13-november             pool-1-thread-2
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task starting      11-lima             pool-1-thread-5
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task stopping       6-golf             pool-1-thread-7
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task stopping      3-delta             pool-1-thread-4
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task stopping      7-hotel             pool-1-thread-8
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task starting     17-romeo             pool-1-thread-4
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task starting    18-sierra             pool-1-thread-8
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task starting      10-kilo             pool-1-thread-3
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task stopping     17-romeo             pool-1-thread-4
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task starting    16-quebec             pool-1-thread-7
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task starting     19-tango             pool-1-thread-4
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task stopping    16-quebec             pool-1-thread-7
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task stopping      11-lima             pool-1-thread-5
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task starting   20-uniform             pool-1-thread-7
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task stopping  13-november             pool-1-thread-2
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task stopping   20-uniform             pool-1-thread-7
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task starting   22-whiskey             pool-1-thread-2
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task starting      15-papa             pool-1-thread-1
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task finished                  8-india (197 remain)
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task starting     14-oscar             pool-1-thread-6
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task stopping      15-papa             pool-1-thread-1
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task stopping   22-whiskey             pool-1-thread-2
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task starting    24-yankee             pool-1-thread-1
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task starting      23-xray             pool-1-thread-7
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task starting    21-victor             pool-1-thread-5
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task stopping     19-tango             pool-1-thread-4
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task stopping      10-kilo             pool-1-thread-3
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task stopping    18-sierra             pool-1-thread-8
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task starting     26-alpha             pool-1-thread-4
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task stopping    21-victor             pool-1-thread-5
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task stopping      23-xray             pool-1-thread-7
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task starting     29-delta             pool-1-thread-5
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task stopping    24-yankee             pool-1-thread-1
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task starting      25-zulu             pool-1-thread-2
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task stopping     14-oscar             pool-1-thread-6
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task finished                9-juliett (196 remain)
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task starting      32-golf             pool-1-thread-6
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task stopping      25-zulu             pool-1-thread-2
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task starting   31-foxtrot             pool-1-thread-1
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task starting     33-hotel             pool-1-thread-2
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task stopping     29-delta             pool-1-thread-5
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task starting      30-echo             pool-1-thread-7
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task stopping     26-alpha             pool-1-thread-4
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task stopping      30-echo             pool-1-thread-7
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task starting   28-charlie             pool-1-thread-8
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task starting      36-kilo             pool-1-thread-7
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task starting     27-bravo             pool-1-thread-3
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task stopping   28-charlie             pool-1-thread-8
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task starting   35-juliett             pool-1-thread-4
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task starting     34-india             pool-1-thread-5
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task stopping     33-hotel             pool-1-thread-2
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task stopping   31-foxtrot             pool-1-thread-1
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task stopping      32-golf             pool-1-thread-6
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task finished                  10-kilo (195 remain)
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task starting     40-oscar             pool-1-thread-6
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task finished                  11-lima (194 remain)
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task starting  39-november             pool-1-thread-1
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task starting      38-mike             pool-1-thread-2
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task stopping  39-november             pool-1-thread-1
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task stopping      38-mike             pool-1-thread-2
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task stopping     34-india             pool-1-thread-5
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task stopping   35-juliett             pool-1-thread-4
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task starting      37-lima             pool-1-thread-8
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task stopping     27-bravo             pool-1-thread-3
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task stopping      36-kilo             pool-1-thread-7
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task stopping      37-lima             pool-1-thread-8
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task starting    44-sierra             pool-1-thread-4
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task starting     43-romeo             pool-1-thread-5
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task starting    42-quebec             pool-1-thread-2
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task starting      41-papa             pool-1-thread-1
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task stopping    42-quebec             pool-1-thread-2
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task finished                  12-mike (193 remain)
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task stopping     40-oscar             pool-1-thread-6
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task starting   48-whiskey             pool-1-thread-2
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task stopping      41-papa             pool-1-thread-1
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task stopping     43-romeo             pool-1-thread-5
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task starting    50-yankee             pool-1-thread-1
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task stopping    44-sierra             pool-1-thread-4
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task starting    47-victor             pool-1-thread-8
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task starting   46-uniform             pool-1-thread-7
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task starting     45-tango             pool-1-thread-3
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task stopping   46-uniform             pool-1-thread-7
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task starting     52-alpha             pool-1-thread-4
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task stopping    47-victor             pool-1-thread-8
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task stopping    50-yankee             pool-1-thread-1
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task starting      51-zulu             pool-1-thread-5
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task stopping   48-whiskey             pool-1-thread-2
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task starting      49-xray             pool-1-thread-6
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task finished              13-november (192 remain)
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task starting      56-echo             pool-1-thread-2
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task stopping      51-zulu             pool-1-thread-5
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task stopping      56-echo             pool-1-thread-2
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task starting     55-delta             pool-1-thread-1
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task starting      58-golf             pool-1-thread-2
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task starting   54-charlie             pool-1-thread-8
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task stopping     52-alpha             pool-1-thread-4
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task starting     53-bravo             pool-1-thread-7
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task stopping     45-tango             pool-1-thread-3
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task starting     59-hotel             pool-1-thread-4
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task stopping   54-charlie             pool-1-thread-8
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task stopping      58-golf             pool-1-thread-2
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task stopping     55-delta             pool-1-thread-1
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task starting   57-foxtrot             pool-1-thread-5
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task finished                 14-oscar (191 remain)
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task stopping      49-xray             pool-1-thread-6
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task finished                  15-papa (190 remain)
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task stopping   57-foxtrot             pool-1-thread-5
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task starting      63-lima             pool-1-thread-1
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task starting      62-kilo             pool-1-thread-2
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task stopping     59-hotel             pool-1-thread-4
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task starting   61-juliett             pool-1-thread-8
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task starting     60-india             pool-1-thread-3
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task stopping     53-bravo             pool-1-thread-7
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task stopping     60-india             pool-1-thread-3
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task stopping   61-juliett             pool-1-thread-8
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task starting    68-quebec             pool-1-thread-3
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task starting     66-oscar             pool-1-thread-4
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task stopping      62-kilo             pool-1-thread-2
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task stopping      63-lima             pool-1-thread-1
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task starting  65-november             pool-1-thread-5
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task finished                16-quebec (189 remain)
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task starting      64-mike             pool-1-thread-6
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task finished                 17-romeo (188 remain)
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task stopping  65-november             pool-1-thread-5
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task starting     71-tango             pool-1-thread-1
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task starting   72-uniform             pool-1-thread-5
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task starting    70-sierra             pool-1-thread-2
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task stopping     66-oscar             pool-1-thread-4
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task stopping    68-quebec             pool-1-thread-3
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task starting     69-romeo             pool-1-thread-8
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task starting      67-papa             pool-1-thread-7
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task starting   74-whiskey             pool-1-thread-3
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task starting    73-victor             pool-1-thread-4
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task stopping    70-sierra             pool-1-thread-2
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task stopping   72-uniform             pool-1-thread-5
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task starting      75-xray             pool-1-thread-2
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task stopping     71-tango             pool-1-thread-1
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task finished                18-sierra (187 remain)
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task stopping      64-mike             pool-1-thread-6
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task finished                 19-tango (186 remain)
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task starting     78-alpha             pool-1-thread-6
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task finished               20-uniform (185 remain)
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task starting      77-zulu             pool-1-thread-1
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task stopping      75-xray             pool-1-thread-2
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task starting    76-yankee             pool-1-thread-5
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task stopping    73-victor             pool-1-thread-4
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task stopping   74-whiskey             pool-1-thread-3
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task starting   80-charlie             pool-1-thread-4
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task starting     81-delta             pool-1-thread-3
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task stopping      67-papa             pool-1-thread-7
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task stopping     69-romeo             pool-1-thread-8
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task starting      82-echo             pool-1-thread-7
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task stopping     81-delta             pool-1-thread-3
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task stopping      82-echo             pool-1-thread-7
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task starting      84-golf             pool-1-thread-3
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task stopping   80-charlie             pool-1-thread-4
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task stopping    76-yankee             pool-1-thread-5
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task starting     79-bravo             pool-1-thread-2
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task starting   87-juliett             pool-1-thread-5
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task stopping      77-zulu             pool-1-thread-1
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task finished                21-victor (184 remain)
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task stopping     78-alpha             pool-1-thread-6
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task finished               22-whiskey (183 remain)
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task starting      88-kilo             pool-1-thread-1
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task stopping   87-juliett             pool-1-thread-5
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task stopping     79-bravo             pool-1-thread-2
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task starting      90-mike             pool-1-thread-5
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task starting  91-november             pool-1-thread-2
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task starting     86-india             pool-1-thread-4
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task stopping      84-golf             pool-1-thread-3
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task starting     85-hotel             pool-1-thread-7
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task starting     92-oscar             pool-1-thread-3
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task stopping     85-hotel             pool-1-thread-7
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task starting   83-foxtrot             pool-1-thread-8
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task starting      93-papa             pool-1-thread-7
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task stopping     92-oscar             pool-1-thread-3
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task stopping     86-india             pool-1-thread-4
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task stopping  91-november             pool-1-thread-2
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task stopping      90-mike             pool-1-thread-5
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task starting     97-tango             pool-1-thread-5
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task stopping     97-tango             pool-1-thread-5
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task stopping      88-kilo             pool-1-thread-1
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task starting    99-victor             pool-1-thread-1
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task stopping    99-victor             pool-1-thread-1
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task starting  100-whiskey             pool-1-thread-1
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task stopping  100-whiskey             pool-1-thread-1
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task starting     101-xray             pool-1-thread-1
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task finished                  23-xray (182 remain)
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task finished                24-yankee (181 remain)
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task starting      89-lima             pool-1-thread-6
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task stopping      89-lima             pool-1-thread-6
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task finished                  25-zulu (180 remain)
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task stopping     101-xray             pool-1-thread-1
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task finished                 26-alpha (179 remain)
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task finished                 27-bravo (178 remain)
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task finished               28-charlie (177 remain)
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task starting     103-zulu             pool-1-thread-1
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task stopping     103-zulu             pool-1-thread-1
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task starting    104-alpha             pool-1-thread-1
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task stopping    104-alpha             pool-1-thread-1
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task starting   98-uniform             pool-1-thread-5
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task starting    96-sierra             pool-1-thread-2
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task stopping   98-uniform             pool-1-thread-5
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task starting  106-charlie             pool-1-thread-5
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task stopping  106-charlie             pool-1-thread-5
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task starting    107-delta             pool-1-thread-5
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task starting     95-romeo             pool-1-thread-4
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task starting    94-quebec             pool-1-thread-3
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task stopping      93-papa             pool-1-thread-7
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task starting     108-echo             pool-1-thread-7
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task stopping   83-foxtrot             pool-1-thread-8
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task stopping     108-echo             pool-1-thread-7
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task stopping    94-quebec             pool-1-thread-3
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task stopping     95-romeo             pool-1-thread-4
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task starting    112-india             pool-1-thread-4
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task stopping    107-delta             pool-1-thread-5
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task stopping    96-sierra             pool-1-thread-2
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task starting    105-bravo             pool-1-thread-1
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task finished                 29-delta (176 remain)
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task starting   102-yankee             pool-1-thread-6
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task finished                  30-echo (175 remain)
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task stopping    105-bravo             pool-1-thread-1
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task starting     114-kilo             pool-1-thread-2
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task starting  113-juliett             pool-1-thread-5
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task stopping    112-india             pool-1-thread-4
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task stopping  113-juliett             pool-1-thread-5
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task starting    111-hotel             pool-1-thread-3
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task starting 117-november             pool-1-thread-5
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task starting     110-golf             pool-1-thread-7
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task starting  109-foxtrot             pool-1-thread-8
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task stopping     110-golf             pool-1-thread-7
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task stopping 117-november             pool-1-thread-5
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task stopping    111-hotel             pool-1-thread-3
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task starting     116-mike             pool-1-thread-4
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task stopping     114-kilo             pool-1-thread-2
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task starting     115-lima             pool-1-thread-1
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task finished               31-foxtrot (174 remain)
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task stopping   102-yankee             pool-1-thread-6
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task stopping     115-lima             pool-1-thread-1
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task starting    121-romeo             pool-1-thread-2
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task starting    123-tango             pool-1-thread-1
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task stopping    121-romeo             pool-1-thread-2
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task stopping     116-mike             pool-1-thread-4
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task starting   120-quebec             pool-1-thread-3
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task starting     119-papa             pool-1-thread-5
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task starting    118-oscar             pool-1-thread-7
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task stopping  109-foxtrot             pool-1-thread-8
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task stopping    118-oscar             pool-1-thread-7
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task stopping     119-papa             pool-1-thread-5
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task stopping   120-quebec             pool-1-thread-3
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task starting   125-victor             pool-1-thread-4
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task starting  124-uniform             pool-1-thread-2
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task stopping    123-tango             pool-1-thread-1
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task stopping  124-uniform             pool-1-thread-2
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task starting   122-sierra             pool-1-thread-6
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task finished                  32-golf (173 remain)
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task stopping   122-sierra             pool-1-thread-6
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task starting    131-bravo             pool-1-thread-2
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task starting    130-alpha             pool-1-thread-1
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task stopping   125-victor             pool-1-thread-4
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task starting     129-zulu             pool-1-thread-3
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task starting   128-yankee             pool-1-thread-5
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task starting     127-xray             pool-1-thread-7
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task stopping   128-yankee             pool-1-thread-5
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task starting  126-whiskey             pool-1-thread-8
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task starting     134-echo             pool-1-thread-5
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task stopping     127-xray             pool-1-thread-7
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task stopping     129-zulu             pool-1-thread-3
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task starting    133-delta             pool-1-thread-4
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task stopping    130-alpha             pool-1-thread-1
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task stopping    133-delta             pool-1-thread-4
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task stopping    131-bravo             pool-1-thread-2
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task starting  132-charlie             pool-1-thread-6
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task finished                 33-hotel (172 remain)
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task stopping  132-charlie             pool-1-thread-6
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task starting  139-juliett             pool-1-thread-2
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task starting    138-india             pool-1-thread-4
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task starting    137-hotel             pool-1-thread-1
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task starting     136-golf             pool-1-thread-3
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task starting  135-foxtrot             pool-1-thread-7
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task stopping     136-golf             pool-1-thread-3
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task stopping     134-echo             pool-1-thread-5
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task stopping  126-whiskey             pool-1-thread-8
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task starting     141-lima             pool-1-thread-3
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task stopping  135-foxtrot             pool-1-thread-7
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task stopping    137-hotel             pool-1-thread-1
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task stopping    138-india             pool-1-thread-4
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task starting     145-papa             pool-1-thread-1
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task stopping  139-juliett             pool-1-thread-2
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task starting     140-kilo             pool-1-thread-6
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task finished                 34-india (171 remain)
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task stopping     140-kilo             pool-1-thread-6
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task starting    147-romeo             pool-1-thread-2
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task stopping     145-papa             pool-1-thread-1
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task starting   146-quebec             pool-1-thread-4
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task starting    144-oscar             pool-1-thread-7
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task stopping     141-lima             pool-1-thread-3
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task starting 143-november             pool-1-thread-8
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task stopping 143-november             pool-1-thread-8
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task starting     142-mike             pool-1-thread-5
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task starting   151-victor             pool-1-thread-8
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task stopping     142-mike             pool-1-thread-5
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task starting  150-uniform             pool-1-thread-3
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task stopping    144-oscar             pool-1-thread-7
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task stopping  150-uniform             pool-1-thread-3
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task stopping   146-quebec             pool-1-thread-4
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task starting    149-tango             pool-1-thread-1
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task starting     155-zulu             pool-1-thread-4
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task stopping    147-romeo             pool-1-thread-2
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task starting   148-sierra             pool-1-thread-6
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task starting    156-alpha             pool-1-thread-2
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task finished               35-juliett (170 remain)
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task stopping    156-alpha             pool-1-thread-2
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task stopping   148-sierra             pool-1-thread-6
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task starting    157-bravo             pool-1-thread-2
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task stopping     155-zulu             pool-1-thread-4
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task stopping    149-tango             pool-1-thread-1
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task starting    159-delta             pool-1-thread-4
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task starting   154-yankee             pool-1-thread-3
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task stopping    159-delta             pool-1-thread-4
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task starting     153-xray             pool-1-thread-7
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task starting  152-whiskey             pool-1-thread-5
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task stopping   151-victor             pool-1-thread-8
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task starting     162-golf             pool-1-thread-8
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task stopping     153-xray             pool-1-thread-7
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task stopping     162-golf             pool-1-thread-8
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task starting  161-foxtrot             pool-1-thread-4
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task starting    164-india             pool-1-thread-8
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task stopping   154-yankee             pool-1-thread-3
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task starting     160-echo             pool-1-thread-1
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task starting  165-juliett             pool-1-thread-3
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task stopping    157-bravo             pool-1-thread-2
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task starting  158-charlie             pool-1-thread-6
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task finished                  36-kilo (169 remain)
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task starting     166-kilo             pool-1-thread-2
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task finished                  37-lima (168 remain)
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task stopping     166-kilo             pool-1-thread-2
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task finished                  38-mike (167 remain)
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task stopping  158-charlie             pool-1-thread-6
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task stopping  165-juliett             pool-1-thread-3
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task stopping     160-echo             pool-1-thread-1
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task stopping    164-india             pool-1-thread-8
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task stopping  161-foxtrot             pool-1-thread-4
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task starting     171-papa             pool-1-thread-8
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task starting    163-hotel             pool-1-thread-7
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task stopping  152-whiskey             pool-1-thread-5
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task stopping    163-hotel             pool-1-thread-7
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task stopping     171-papa             pool-1-thread-8
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task starting   174-sierra             pool-1-thread-7
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task starting    175-tango             pool-1-thread-8
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task starting   172-quebec             pool-1-thread-4
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task starting    170-oscar             pool-1-thread-1
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task stopping   172-quebec             pool-1-thread-4
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task starting 169-november             pool-1-thread-3
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task starting     168-mike             pool-1-thread-6
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task finished              39-november (166 remain)
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task stopping     168-mike             pool-1-thread-6
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task finished                 40-oscar (165 remain)
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task starting   177-victor             pool-1-thread-6
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task starting     167-lima             pool-1-thread-2
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task stopping   177-victor             pool-1-thread-6
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task finished                  41-papa (164 remain)
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task starting  178-whiskey             pool-1-thread-6
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task stopping 169-november             pool-1-thread-3
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task starting  176-uniform             pool-1-thread-4
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task stopping    170-oscar             pool-1-thread-1
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task stopping    175-tango             pool-1-thread-8
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task stopping   174-sierra             pool-1-thread-7
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task starting    173-romeo             pool-1-thread-5
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task starting     181-zulu             pool-1-thread-8
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task starting   180-yankee             pool-1-thread-1
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task stopping  176-uniform             pool-1-thread-4
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task starting     179-xray             pool-1-thread-3
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task starting    183-bravo             pool-1-thread-4
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task stopping  178-whiskey             pool-1-thread-6
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task finished                42-quebec (163 remain)
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task stopping     167-lima             pool-1-thread-2
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task finished                 43-romeo (162 remain)
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task starting    185-delta             pool-1-thread-2
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task starting  184-charlie             pool-1-thread-6
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task stopping    183-bravo             pool-1-thread-4
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task stopping     179-xray             pool-1-thread-3
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task starting     186-echo             pool-1-thread-4
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task stopping   180-yankee             pool-1-thread-1
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task starting  187-foxtrot             pool-1-thread-3
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task stopping     181-zulu             pool-1-thread-8
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task stopping    173-romeo             pool-1-thread-5
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task starting    182-alpha             pool-1-thread-7
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task starting    190-india             pool-1-thread-5
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task starting    189-hotel             pool-1-thread-8
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task stopping  187-foxtrot             pool-1-thread-3
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task starting     188-golf             pool-1-thread-1
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task stopping     186-echo             pool-1-thread-4
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task stopping  184-charlie             pool-1-thread-6
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task stopping    185-delta             pool-1-thread-2
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task finished                44-sierra (161 remain)
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task starting     194-mike             pool-1-thread-2
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task starting     193-lima             pool-1-thread-6
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task stopping     194-mike             pool-1-thread-2
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task stopping     193-lima             pool-1-thread-6
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task starting     192-kilo             pool-1-thread-4
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task stopping     188-golf             pool-1-thread-1
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task starting  191-juliett             pool-1-thread-3
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task starting     197-papa             pool-1-thread-1
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task stopping    189-hotel             pool-1-thread-8
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task stopping    190-india             pool-1-thread-5
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task stopping    182-alpha             pool-1-thread-7
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task starting   198-quebec             pool-1-thread-8
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task starting    199-romeo             pool-1-thread-5
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task stopping     197-papa             pool-1-thread-1
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task stopping  191-juliett             pool-1-thread-3
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task stopping     192-kilo             pool-1-thread-4
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task starting    196-oscar             pool-1-thread-6
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task starting 195-november             pool-1-thread-2
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task finished                 45-tango (160 remain)
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task stopping 195-november             pool-1-thread-2
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task finished               46-uniform (159 remain)
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task stopping    196-oscar             pool-1-thread-6
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task finished                47-victor (158 remain)
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task stopping    199-romeo             pool-1-thread-5
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task stopping   198-quebec             pool-1-thread-8
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task finished               48-whiskey (157 remain)
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task finished                  49-xray (156 remain)
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task finished                50-yankee (155 remain)
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task finished                  51-zulu (154 remain)
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task finished                 52-alpha (153 remain)
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task finished                 53-bravo (152 remain)
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task finished               54-charlie (151 remain)
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task finished                 55-delta (150 remain)
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task finished                  56-echo (149 remain)
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task finished               57-foxtrot (148 remain)
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task finished                  58-golf (147 remain)
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task finished                 59-hotel (146 remain)
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task finished                 60-india (145 remain)
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task finished               61-juliett (144 remain)
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task finished                  62-kilo (143 remain)
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task finished                  63-lima (142 remain)
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task finished                  64-mike (141 remain)
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task finished              65-november (140 remain)
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task finished                 66-oscar (139 remain)
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task finished                  67-papa (138 remain)
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task finished                68-quebec (137 remain)
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task finished                 69-romeo (136 remain)
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task finished                70-sierra (135 remain)
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task finished                 71-tango (134 remain)
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task finished               72-uniform (133 remain)
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task finished                73-victor (132 remain)
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task finished               74-whiskey (131 remain)
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task finished                  75-xray (130 remain)
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task finished                76-yankee (129 remain)
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task finished                  77-zulu (128 remain)
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task finished                 78-alpha (127 remain)
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task finished                 79-bravo (126 remain)
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task finished               80-charlie (125 remain)
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task finished                 81-delta (124 remain)
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task finished                  82-echo (123 remain)
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task finished               83-foxtrot (122 remain)
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task finished                  84-golf (121 remain)
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task finished                 85-hotel (120 remain)
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task finished                 86-india (119 remain)
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task finished               87-juliett (118 remain)
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task finished                  88-kilo (117 remain)
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task finished                  89-lima (116 remain)
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task finished                  90-mike (115 remain)
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task finished              91-november (114 remain)
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task finished                 92-oscar (113 remain)
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task finished                  93-papa (112 remain)
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task finished                94-quebec (111 remain)
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task finished                 95-romeo (110 remain)
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task finished                96-sierra (109 remain)
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task finished                 97-tango (108 remain)
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task finished               98-uniform (107 remain)
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task finished                99-victor (106 remain)
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task finished              100-whiskey (105 remain)
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task finished                 101-xray (104 remain)
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task finished               102-yankee (103 remain)
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task finished                 103-zulu (102 remain)
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task finished                104-alpha (101 remain)
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task finished                105-bravo (100 remain)
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task finished              106-charlie (99 remain)
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task finished                107-delta (98 remain)
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task finished                 108-echo (97 remain)
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task finished              109-foxtrot (96 remain)
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task finished                 110-golf (95 remain)
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task finished                111-hotel (94 remain)
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task finished                112-india (93 remain)
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task finished              113-juliett (92 remain)
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task finished                 114-kilo (91 remain)
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task finished                 115-lima (90 remain)
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task finished                 116-mike (89 remain)
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task finished             117-november (88 remain)
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task finished                118-oscar (87 remain)
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task finished                 119-papa (86 remain)
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task finished               120-quebec (85 remain)
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task finished                121-romeo (84 remain)
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task finished               122-sierra (83 remain)
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task finished                123-tango (82 remain)
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task finished              124-uniform (81 remain)
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task finished               125-victor (80 remain)
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task finished              126-whiskey (79 remain)
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task finished                 127-xray (78 remain)
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task finished               128-yankee (77 remain)
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task finished                 129-zulu (76 remain)
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task finished                130-alpha (75 remain)
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task finished                131-bravo (74 remain)
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task finished              132-charlie (73 remain)
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task finished                133-delta (72 remain)
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task finished                 134-echo (71 remain)
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task finished              135-foxtrot (70 remain)
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task finished                 136-golf (69 remain)
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task finished                137-hotel (68 remain)
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task finished                138-india (67 remain)
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task finished              139-juliett (66 remain)
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task finished                 140-kilo (65 remain)
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task finished                 141-lima (64 remain)
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task finished                 142-mike (63 remain)
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task finished             143-november (62 remain)
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task finished                144-oscar (61 remain)
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task finished                 145-papa (60 remain)
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task finished               146-quebec (59 remain)
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task finished                147-romeo (58 remain)
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task finished               148-sierra (57 remain)
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task finished                149-tango (56 remain)
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task finished              150-uniform (55 remain)
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task finished               151-victor (54 remain)
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task finished              152-whiskey (53 remain)
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task finished                 153-xray (52 remain)
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task finished               154-yankee (51 remain)
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task finished                 155-zulu (50 remain)
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task finished                156-alpha (49 remain)
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task finished                157-bravo (48 remain)
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task finished              158-charlie (47 remain)
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task finished                159-delta (46 remain)
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task finished                 160-echo (45 remain)
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task finished              161-foxtrot (44 remain)
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task finished                 162-golf (43 remain)
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task finished                163-hotel (42 remain)
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task finished                164-india (41 remain)
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task finished              165-juliett (40 remain)
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task finished                 166-kilo (39 remain)
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task finished                 167-lima (38 remain)
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task finished                 168-mike (37 remain)
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task finished             169-november (36 remain)
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task finished                170-oscar (35 remain)
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task finished                 171-papa (34 remain)
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task finished               172-quebec (33 remain)
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task finished                173-romeo (32 remain)
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task finished               174-sierra (31 remain)
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task finished                175-tango (30 remain)
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task finished              176-uniform (29 remain)
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task finished               177-victor (28 remain)
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task finished              178-whiskey (27 remain)
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task finished                 179-xray (26 remain)
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task finished               180-yankee (25 remain)
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task finished                 181-zulu (24 remain)
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task finished                182-alpha (23 remain)
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task finished                183-bravo (22 remain)
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task finished              184-charlie (21 remain)
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task finished                185-delta (20 remain)
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task finished                 186-echo (19 remain)
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task finished              187-foxtrot (18 remain)
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task finished                 188-golf (17 remain)
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task finished                189-hotel (16 remain)
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task finished                190-india (15 remain)
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task finished              191-juliett (14 remain)
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task finished                 192-kilo (13 remain)
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task finished                 193-lima (12 remain)
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task finished                 194-mike (11 remain)
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task finished             195-november (10 remain)
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task finished                196-oscar (9 remain)
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task finished                 197-papa (8 remain)
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task finished               198-quebec (7 remain)
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task finished                199-romeo (6 remain)
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task finished                  1-bravo (5 remain)
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task finished                2-charlie (4 remain)
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task finished                  3-delta (3 remain)
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task finished                5-foxtrot (2 remain)
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task finished                   6-golf (1 remain)
+19/05/25 22:40:28 INFO ExecutorsAndFutures: task finished                  7-hotel (0 remain)
+19/05/25 22:40:28 INFO ExecutorsAndFutures: done failed=0
+
+Process finished with exit code 0
