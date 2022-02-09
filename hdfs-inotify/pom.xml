@@ -14,7 +14,7 @@
 
     <properties>
         <guava.version>21.0</guava.version>
-        <hadoop.version>2.7.3</hadoop.version>
+        <hadoop.version>2.10.1</hadoop.version>
         <jcommander.version>1.72</jcommander.version>
         <junit.version>4.12</junit.version>
         <log4j.version>2.11.0</log4j.version>
